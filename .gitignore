@@ -116,3 +116,12 @@ app/app.iml
 .idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml
 app/app.iml
 local.properties
+.gradle/5.1.1/executionHistory/executionHistory.bin
+.gradle/5.1.1/executionHistory/executionHistory.lock
+.gradle/5.1.1/fileHashes/fileHashes.bin
+.gradle/5.1.1/fileHashes/fileHashes.lock
+.gradle/5.1.1/javaCompile/classAnalysis.bin
+.gradle/5.1.1/javaCompile/javaCompile.lock
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.idea/caches/build_file_checksums.ser
+.idea/caches/gradle_models.ser
