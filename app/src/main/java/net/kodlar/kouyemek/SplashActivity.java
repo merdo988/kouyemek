@@ -12,6 +12,7 @@ public class SplashActivity extends AppCompatActivity {
         Intent intent = new Intent(SplashActivity.this,MainActivity.class);
         startActivity(intent);
         System.out.println("vvvvv");
+        System.out.println("llll");
         finish();
     }
 }
