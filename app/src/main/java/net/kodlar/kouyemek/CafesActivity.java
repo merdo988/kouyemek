@@ -12,15 +12,15 @@ public class CafesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_cafes);
         ArrayList<Cafes> cafes = new ArrayList<Cafes>();
         cafes.add(new Cafes("Mahur Kafe",R.drawable.logo));
         cafes.add(new Cafes("Deep Kafe",R.drawable.logo));
-        CustomListViewAdapterCafes CustomListViewAdapterCafes = new CustomListViewAdapterCafes(this,R.layout.list_view_item_cafes,cafes);
+        CustomListViewAdapterCafes customListViewAdapterCafes = new CustomListViewAdapterCafes(this,R.layout.list_view_item_cafes,cafes);
 
         ListView listviewCafes = (ListView)findViewById(R.id.cafes_list_view);
         if(listviewCafes != null){
-            listviewCafes.setAdapter(CustomListViewAdapterCafes);
+            listviewCafes.setAdapter(customListViewAdapterCafes);
         }
     }
 }
