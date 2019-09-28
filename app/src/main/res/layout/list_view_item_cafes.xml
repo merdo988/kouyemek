@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="16dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/cafeLogo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/logo">
+            </ImageView>
+            <TextView
+                android:id="@+id/cafesName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mahur Cafe"
+                android:layout_centerInParent="true"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-condensed">
+            </TextView>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="100dp"
+                android:layout_toRightOf="@id/cafesName"
+                android:layout_centerVertical="true"
+                android:src="@drawable/chevron_icon">
+            </ImageView>
+
+        </RelativeLayout>
+
+
+</LinearLayout>
+</LinearLayout>
