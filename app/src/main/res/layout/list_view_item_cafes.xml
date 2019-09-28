@@ -19,7 +19,7 @@
                 android:src="@drawable/logo">
             </ImageView>
             <TextView
-                android:id="@+id/cafesName"
+                android:id="@+id/cafeName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mahur Cafe"
@@ -32,7 +32,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="100dp"
-                android:layout_toRightOf="@id/cafesName"
+                android:layout_toRightOf="@id/cafeName"
                 android:layout_centerVertical="true"
                 android:src="@drawable/chevron_icon">
             </ImageView>
