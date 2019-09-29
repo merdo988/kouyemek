@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.squareup.picasso.Picasso;
+
 
 import java.util.ArrayList;
 
@@ -37,7 +39,7 @@ public class CustomListViewAdapterCafes extends ArrayAdapter<Cafes> {
 
             if(cafeLogo != null && cafeName != null){
                 cafeName.setText(c.getCafeName());
-                cafeLogo.setImageResource(c.getLogoResourceID());
+                Picasso.with(getContext()).load(c.getLogoResourceUrl()).into(cafeLogo);
             }
         }
         return v;

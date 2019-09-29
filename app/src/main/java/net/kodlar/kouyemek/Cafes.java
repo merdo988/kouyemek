@@ -3,14 +3,14 @@ package net.kodlar.kouyemek;
 public class Cafes {
     private int cafeID;
     private String cafeName;
-    private int LogoResID;
+    private String LogoResourceUrl;
 
     public Cafes(){
 
     }
-    public Cafes(String cafeName , int LogoResID){
+    public Cafes(String cafeName , String LogoResID){
         this.cafeName = cafeName;
-        this.LogoResID = LogoResID;
+        this.LogoResourceUrl = LogoResID;
     }
     public int getCafeID(){
         return this.cafeID;
@@ -24,10 +24,10 @@ public class Cafes {
     public String getCafeName(){
         return this.cafeName;
     }
-    public void setLogoResID(int LogoResID){
-        this.LogoResID = LogoResID;
+    public void setLogoResourceUrl(String LogoResourceUrl){
+        this.LogoResourceUrl = LogoResourceUrl;
     }
-    public int getLogoResourceID() {
-        return LogoResID;
+    public String getLogoResourceUrl() {
+        return LogoResourceUrl;
     }
 }
