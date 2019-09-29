@@ -173,3 +173,12 @@ app/app.iml
 local.properties
 .idea/libraries/Gradle__com_squareup_picasso_picasso_2_5_2_jar.xml
 .idea/libraries/Gradle__com_android_volley_volley_1_1_0_aar.xml
+.gradle/5.1.1/executionHistory/executionHistory.bin
+.gradle/5.1.1/executionHistory/executionHistory.lock
+.gradle/5.1.1/fileHashes/fileHashes.bin
+.gradle/5.1.1/fileHashes/fileHashes.lock
+.gradle/5.1.1/javaCompile/classAnalysis.bin
+.gradle/5.1.1/javaCompile/javaCompile.lock
+.gradle/5.1.1/javaCompile/taskHistory.bin
+.gradle/buildOutputCleanup/buildOutputCleanup.lock
+.gradle/buildOutputCleanup/outputFiles.bin
