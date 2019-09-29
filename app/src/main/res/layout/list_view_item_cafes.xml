@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:padding="16dp"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:padding="12sp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -11,8 +11,8 @@
 
                 <ImageView
                     android:id="@+id/cafeLogo"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:src="@drawable/logo">
                 </ImageView>
 
@@ -33,7 +33,6 @@
                     android:layout_centerVertical="true"
                     android:src="@drawable/chevron_icon">
                 </ImageView>
-
             </RelativeLayout>
 
 
