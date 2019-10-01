@@ -1,8 +1,10 @@
 package net.kodlar.kouyemek;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -30,6 +32,7 @@ public class CafesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         cafes = new ArrayList<Cafes>();
         dialog = new ProgressDialog(this);
         dialog.setMessage("Loading....");
@@ -38,7 +41,6 @@ public class CafesActivity extends AppCompatActivity {
         StringRequest request = new StringRequest(url, new Response.Listener<String>() {
             @Override
             public void onResponse(String string) {
-                System.out.println("veri çekildi");
                 parseJsonData(string);
             }
         }, new Response.ErrorListener() {
@@ -67,6 +69,7 @@ public class CafesActivity extends AppCompatActivity {
             listviewCafes = (ListView)findViewById(R.id.cafes_list_view);
 
             if(listviewCafes != null){
+                System.out.println("Null değil");
                 listviewCafes.setAdapter(customListViewAdapterCafes);
             }
         } catch (JSONException e) {
@@ -75,4 +78,6 @@ public class CafesActivity extends AppCompatActivity {
 
         dialog.dismiss();
     }
+
+
 }
