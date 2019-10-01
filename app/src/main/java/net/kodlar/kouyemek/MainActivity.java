@@ -15,8 +15,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void cafelereGit(View view){
-        System.out.println("Tiklanildi");
-
         try {
             Intent intent = new Intent(getApplicationContext(), CafesActivity.class);
             startActivity(intent);
