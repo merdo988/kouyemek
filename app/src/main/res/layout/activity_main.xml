@@ -55,6 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
+        android:onClick="yemekhaneyeGit"
         android:layout_marginRight="20dp"
         card_view:cardElevation="3dp"
         card_view:cardCornerRadius="15dp">
@@ -118,8 +119,9 @@
                 android:id="@+id/sc1CardCafelerText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:layout_centerInParent="true"
-                android:fontFamily=""
+                android:fontFamily="sans-serif-condensed"
                 android:text="Kafeler"
                 android:textSize="16sp"
                />
@@ -162,7 +164,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:fontFamily=""
+                android:fontFamily="sans-serif-condensed"
                 android:text="Fırsatlar"
                 android:textSize="16sp"/>
 
@@ -205,7 +207,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:fontFamily=""
+                android:fontFamily="sans-serif-condensed"
                 android:text="Uygulama Hakkında"
                 android:textSize="16sp"
                 />
