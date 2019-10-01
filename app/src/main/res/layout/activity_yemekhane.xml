@@ -1,0 +1,485 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tarih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="23.06.2019" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/anayemekler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="0dp">
+
+                <RelativeLayout
+                    android:id="@+id/anayemekRelative"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/anayemek2"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:foreground="@drawable/rounded_shape"
+
+                        android:padding="4dp"
+                        app:srcCompat="@drawable/gemici_usulu_kuru_fasulye_128x128" />
+
+                    <TextView
+                        android:id="@+id/anayemek2Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/anayemek2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="Gemici Usülü Kuru Fasülye"
+                        android:textAlignment="center"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/anayemek2Text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#32D532"
+                        android:fontFamily="sans-serif-condensed"
+
+                        android:text="176"
+                        android:textAlignment="center" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/ortaCizgi"
+                    android:layout_width="0.25dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:background="#000" />
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/anayemek1"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:foreground="@drawable/rounded_shape"
+                        android:padding="4dp"
+                        app:srcCompat="@drawable/bahcivan_kebabi_128x128" />
+
+                    <TextView
+                        android:id="@+id/anayemek1Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/anayemek1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="Bahçivan Kebap"
+                        android:textAlignment="center"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/anayemek1Text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:background="#32D532"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="220"
+                        android:layout_marginBottom="5dp"
+                        android:textAlignment="center" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="#8288D3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#8288D3"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:fontFamily="sans-serif-condensed"
+
+                android:text="Ana Yemekler" />
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/corbalarCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="0dp">
+
+                <RelativeLayout
+                    android:id="@+id/corbalarRelative"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/corba1"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:foreground="@drawable/rounded_shape"
+
+                        android:padding="4dp"
+                        app:srcCompat="@drawable/alaca_corba_128x128" />
+
+                    <TextView
+                        android:id="@+id/corba1Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/corba1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Alaca Çorba"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/corba1Text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#32D532"
+                        android:fontFamily="sans-serif-condensed"
+
+                        android:text="56"
+                        android:textAlignment="center" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/ortaCizgiCorba"
+                    android:layout_width="0.25dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:background="#000" />
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/corba2"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:foreground="@drawable/rounded_shape"
+                        android:padding="4dp"
+                        app:srcCompat="@drawable/domates_corba_128x128" />
+
+                    <TextView
+                        android:id="@+id/corba2Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/corba2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Domates Çorba"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/corba2Text"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#32D532"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="20"
+                        android:textAlignment="center" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="#59B057">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#59B057"
+                android:textAlignment="center"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Çorbalar"
+                android:textColor="#fff"
+
+                android:textSize="20sp" />
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/ekler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp">
+
+                <RelativeLayout
+                    android:id="@+id/icecek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/icecekIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="125dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:foreground="@drawable/rounded_shape"
+
+                        android:padding="4dp"
+                        app:srcCompat="@drawable/asure_128x128" />
+
+                    <TextView
+                        android:id="@+id/icecekText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/icecekIcon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Aşure"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/icecekText"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#32D532"
+                        android:fontFamily="sans-serif-condensed"
+
+                        android:text="136"
+                        android:textAlignment="center" />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+
+                android:layout_centerHorizontal="true"
+                app:cardBackgroundColor="#57B0AF">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#57B0AF"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Yardımcı"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp">
+
+                <RelativeLayout
+                    android:id="@+id/yardimciRelative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/yardimciIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="125dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:foreground="@drawable/rounded_shape"
+
+                        android:padding="4dp"
+                        app:srcCompat="@drawable/ayran_128x128" />
+
+                    <TextView
+                        android:id="@+id/yardimciText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/yardimciIcon"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Ayran"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/yardimciText"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#32D532"
+                        android:fontFamily="sans-serif-condensed"
+
+                        android:text="92"
+                        android:textAlignment="center" />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                app:cardBackgroundColor="#237E82">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#237E82"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="#fff"
+                    android:textAlignment="center"
+                    android:text="İçecek ve Tatlı" />
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>
+</ScrollView>

@@ -2,13 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.kodlar.kouyemek">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_rounded"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_rounded"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".CafesMenuActivity"></activity>
+
+        <activity android:name=".YemekhaneActivity"></activity>
+
         <activity android:name=".CafesActivity" />
         <activity
             android:name=".SplashActivity"
@@ -26,5 +33,4 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <uses-permission android:name="android.permission.INTERNET" />
-
 </manifest>

@@ -7,16 +7,27 @@ import android.support.v7.widget.CardView;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-    CardView cardView;
+    CardView cardViewCafeler;
+    CardView cardViewYemekhane;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        cardView=(CardView)findViewById(R.id.cardCafeler);
+        cardViewCafeler=(CardView)findViewById(R.id.cardCafeler);
+        cardViewYemekhane=(CardView)findViewById(R.id.cardYemekhane);
         setContentView(R.layout.activity_main);
     }
+
     public void cafelereGit(View view){
         try {
             Intent intent = new Intent(getApplicationContext(), CafesActivity.class);
+            startActivity(intent);
+        }catch (Exception e){
+            System.out.println("Hata Oldu "+e);
+        }
+    }
+    public void yemekhaneyeGit(View view){
+        try {
+            Intent intent = new Intent(getApplicationContext(), YemekhaneActivity.class);
             startActivity(intent);
         }catch (Exception e){
             System.out.println("Hata Oldu "+e);
