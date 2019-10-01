@@ -1,6 +1,7 @@
 package net.kodlar.kouyemek;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,7 +26,7 @@ public class CustomListViewAdapterCafes extends ArrayAdapter<Cafes> {
         inflater = LayoutInflater.from(context);
     }
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         View v = convertView;
         if (v == null) {
             LayoutInflater vi;
@@ -42,6 +43,18 @@ public class CustomListViewAdapterCafes extends ArrayAdapter<Cafes> {
                 Picasso.with(getContext()).load(c.getLogoResourceUrl()).into(cafeLogo);
             }
         }
+        v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(getContext(), CafesMenuActivity.class);
+                    context.startActivity(intent);
+                }catch (Exception e){
+                    System.out.println("Hata Oldu "+e);
+                }
+            }
+        });
         return v;
     }
+
 }
