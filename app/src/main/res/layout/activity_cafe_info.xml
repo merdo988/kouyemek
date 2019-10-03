@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <RelativeLayout
+            android:id="@+id/cafeLogoLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/cafeLogo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logo"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/cafeLogoLayout"
+            android:layout_centerInParent="true">
+            <TextView
+                android:id="@+id/cafeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:text="Deep Kafe"
+                />
+            <TextView
+                android:id="@+id/cafeAdress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cafeName"
+                android:text="Adres: Kabaoğlu, 41000 İzmit/Kocaeli"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>
