@@ -3,8 +3,10 @@ package net.kodlar.kouyemek;
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -43,6 +45,7 @@ public class YemekhaneActivity extends AppCompatActivity {
     TextView yardimciYemekText;
     TextView tatliText;
     RelativeLayout noInternet;
+    LinearLayout lineer;
 
     RelativeLayout anaRelat;
     RelativeLayout corbaRelat;
@@ -79,6 +82,9 @@ public class YemekhaneActivity extends AppCompatActivity {
         corbaRelat=(RelativeLayout)findViewById(R.id.corbaRelat);
         eklerRelat=(RelativeLayout)findViewById(R.id.eklerRelat);
         noInternet=(RelativeLayout)findViewById(R.id.noInternet);
+        noInternet=(RelativeLayout)findViewById(R.id.noInternet);
+        noInternet.setVisibility(View.GONE);
+        lineer=(LinearLayout)findViewById(R.id.lineer);
         maxDay=Calendar.getInstance().getActualMaximum(Calendar.DAY_OF_MONTH);
         c = Calendar.getInstance();
         gun = c.get(Calendar.DAY_OF_MONTH);
@@ -130,6 +136,7 @@ public class YemekhaneActivity extends AppCompatActivity {
                     corbaRelat.setVisibility(View.VISIBLE);
                     eklerRelat.setVisibility(View.VISIBLE);
                     noInternet.setVisibility(View.GONE);
+
 
                 }
 
