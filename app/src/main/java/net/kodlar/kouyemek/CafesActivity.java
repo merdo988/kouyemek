@@ -1,12 +1,16 @@
 package net.kodlar.kouyemek;
 
+import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -27,11 +31,29 @@ public class CafesActivity extends AppCompatActivity {
     ProgressDialog dialog;
     ListView listviewCafes;
     ArrayList<Cafes> cafes ;
-    ImageView cafeLogo;
+    TextView menuName;
+    ImageView img;
+    TextView cafeInfoClick;
     CustomListViewAdapterCafes customListViewAdapterCafes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setCustomView(R.layout.toolbar);
+
+
+
+        cafeInfoClick = (TextView) findViewById(R.id.cafeClickInfo);
+        cafeInfoClick.setVisibility(View.GONE);
+
+        img = (ImageView) findViewById(R.id.logo);
+        img.setVisibility(View.GONE);
+        menuName = (TextView) findViewById(R.id.menuName);
+        menuName.setText("Kafeler");
+        menuName.setGravity(RelativeLayout.CENTER_IN_PARENT);
+
         cafes = new ArrayList<Cafes>();
         dialog = new ProgressDialog(this);
         dialog.setMessage("Loading....");
@@ -54,6 +76,7 @@ public class CafesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cafes);
 
     }
+
     void parseJsonData(String jsonString) {
         try {
             JSONObject object = new JSONObject(jsonString);
@@ -68,7 +91,6 @@ public class CafesActivity extends AppCompatActivity {
             listviewCafes = (ListView)findViewById(R.id.cafes_list_view);
 
             if(listviewCafes != null){
-                System.out.println("Null değil");
                 listviewCafes.setAdapter(customListViewAdapterCafes);
             }
         } catch (JSONException e) {
@@ -76,6 +98,9 @@ public class CafesActivity extends AppCompatActivity {
         }
 
         dialog.dismiss();
+    }
+    public void turnBack(View view){
+        finish();
     }
 
 
