@@ -1,20 +1,44 @@
 package net.kodlar.kouyemek;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
+import android.text.Layout;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     CardView cardViewCafeler;
     CardView cardViewYemekhane;
-    private Toolbar toolbar;
+    TextView menuName;
+    TextView cafeInfoClick;
+    ImageView backIcon;
+    ImageView menuIcoN;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
+        getSupportActionBar().setCustomView(R.layout.toolbar);
+        cafeInfoClick = (TextView) findViewById(R.id.cafeClickInfo);
+        cafeInfoClick.setVisibility(View.GONE);
+
+        menuName = (TextView) findViewById(R.id.menuName);
+        menuName.setText("Kou Yemek");
+        menuName.setGravity(RelativeLayout.CENTER_IN_PARENT);
+
+        backIcon = (ImageView) findViewById(R.id.backIcon);
+        backIcon.setVisibility(View.GONE);
+        menuIcoN = (ImageView) findViewById(R.id.logo);
+        menuIcoN.setVisibility(View.GONE);
+
         cardViewCafeler=(CardView)findViewById(R.id.cardCafeler);
         cardViewYemekhane=(CardView)findViewById(R.id.cardYemekhane);
 

@@ -2,45 +2,63 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    >
 
-    <RelativeLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:background="@android:color/holo_green_dark">
-        <ImageView
-            android:id="@+id/backIcon"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/back"
-            android:layout_centerVertical="true">
-        </ImageView>
-
+        android:background="@android:color/transparent"
+        android:layout_height="?actionBarSize">
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:padding="5dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp">
 
             <ImageView
-                android:id="@+id/logo"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/logo">
-            </ImageView>
-
-            <TextView
-                android:id="@+id/menuName"
+                android:id="@+id/backIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@id/logo"
-                android:text="Kou Yemek"/>
+                android:src="@drawable/left_arrow"
+                android:onClick="turnBack">
+            </ImageView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/menuName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kou Yemek"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-condensed" />
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/coffee"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/menuName"
+                    android:layout_marginRight="5dp"/>
+                <TextView
+                    android:id="@+id/cafeClickInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="Kafe bilgisi için dokunun"
+                    android:layout_below="@+id/menuName"
+                    android:layout_toRightOf="@id/logo" />
+
+            </RelativeLayout>
+
+
+
         </RelativeLayout>
 
-
-    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
 
 </LinearLayout>

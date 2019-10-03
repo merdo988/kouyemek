@@ -36,21 +36,13 @@ public class CustomListViewAdapterCafesMenu extends ArrayAdapter<CafesMenu> {
         }
         CafesMenu c = getItem(position);
         if (c != null) {
-           // ImageView product_image = (ImageView)v.findViewById(R.id.product_image);
             TextView product_header = (TextView)v.findViewById(R.id.product_header);
             TextView product_info = (TextView)v.findViewById(R.id.product_info);
             TextView product_price = (TextView)v.findViewById(R.id.product_price);
 
-
-           // Resources res = getContext().getResources(); /** from an Activity */
-
-
-                product_header.setText(c.getProductName());
-                product_info.setText(c.getProductInfo());
-                product_price.setText(c.getProductPrice());
-                //product_image.setImageDrawable(res.getDrawable(R.drawable.tavuk_doner));
-               // Picasso.with(getContext()).load(c.getProductImageResourceUrl()).into(product_image);
-
+            product_header.setText(c.getProductName());
+            product_info.setText(c.getProductInfo());
+            product_price.setText(c.getProductPrice());
         }
         return v;
     }
