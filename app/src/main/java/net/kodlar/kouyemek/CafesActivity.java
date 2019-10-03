@@ -32,7 +32,6 @@ public class CafesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         cafes = new ArrayList<Cafes>();
         dialog = new ProgressDialog(this);
         dialog.setMessage("Loading....");

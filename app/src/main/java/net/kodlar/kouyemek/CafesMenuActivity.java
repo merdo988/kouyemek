@@ -17,7 +17,6 @@ public class CafesMenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cafes_menu);
-
         CafesMenu = new ArrayList<CafesMenu>();
         CafesMenu.add(new CafesMenu("Lavaş Tavuk Döner Dürüm" , "100 gr. tavuk döner, domates, turşu, sos, göbek marul, nane, mayonez" ,"8,00 TL", R.drawable.tavuk_doner ));
         CafesMenu.add(new CafesMenu("Pide Ekmek Arası Tavuk Döner" , "100 gr. tavuk döner, domates, turşu, sos, göbek marul, nane, mayonez" ,"8,00 TL", R.drawable.tavuk_doner ));
