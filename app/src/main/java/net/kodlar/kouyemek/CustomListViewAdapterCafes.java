@@ -18,6 +18,7 @@ public class CustomListViewAdapterCafes extends ArrayAdapter<Cafes> {
     private final LayoutInflater inflater;
     private final Context context;
     private final ArrayList<Cafes> cafes;
+    Cafes c;
 
     public CustomListViewAdapterCafes(@NonNull Context context,int resource, ArrayList<Cafes> cafes) {
         super(context, resource, cafes);
@@ -33,7 +34,7 @@ public class CustomListViewAdapterCafes extends ArrayAdapter<Cafes> {
             vi = LayoutInflater.from(getContext());
             v = vi.inflate(R.layout.list_view_item_cafes, null);
         }
-        Cafes c = getItem(position);
+        c = getItem(position);
         if (c != null) {
             ImageView cafeLogo = (ImageView)v.findViewById(R.id.cafeLogo);
             TextView cafeName = (TextView)v.findViewById(R.id.cafeName);
@@ -46,8 +47,11 @@ public class CustomListViewAdapterCafes extends ArrayAdapter<Cafes> {
         v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                c = getItem(position);
                 try {
                     Intent intent = new Intent(getContext(), CafesMenuActivity.class);
+                    intent.putExtra("cafeName", c.getCafeName());
+                    intent.putExtra("cafeLogo", c.getLogoResourceUrl());
                     context.startActivity(intent);
                 }catch (Exception e){
                     System.out.println("Hata Oldu "+e);
