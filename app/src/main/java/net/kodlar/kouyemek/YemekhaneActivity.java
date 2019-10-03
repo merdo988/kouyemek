@@ -42,6 +42,7 @@ public class YemekhaneActivity extends AppCompatActivity {
     TextView corba1Text;
     TextView yardimciYemekText;
     TextView tatliText;
+    RelativeLayout noInternet;
 
     RelativeLayout anaRelat;
     RelativeLayout corbaRelat;
@@ -77,6 +78,7 @@ public class YemekhaneActivity extends AppCompatActivity {
         anaRelat=(RelativeLayout)findViewById(R.id.anaRelat);
         corbaRelat=(RelativeLayout)findViewById(R.id.corbaRelat);
         eklerRelat=(RelativeLayout)findViewById(R.id.eklerRelat);
+        noInternet=(RelativeLayout)findViewById(R.id.noInternet);
         maxDay=Calendar.getInstance().getActualMaximum(Calendar.DAY_OF_MONTH);
         c = Calendar.getInstance();
         gun = c.get(Calendar.DAY_OF_MONTH);
@@ -127,6 +129,7 @@ public class YemekhaneActivity extends AppCompatActivity {
                     anaRelat.setVisibility(View.VISIBLE);
                     corbaRelat.setVisibility(View.VISIBLE);
                     eklerRelat.setVisibility(View.VISIBLE);
+                    noInternet.setVisibility(View.GONE);
 
                 }
 
@@ -134,9 +137,10 @@ public class YemekhaneActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }else {
-            anaRelat.setVisibility(View.INVISIBLE);
-            corbaRelat.setVisibility(View.INVISIBLE);
-            eklerRelat.setVisibility(View.INVISIBLE);
+            anaRelat.setVisibility(View.GONE);
+            corbaRelat.setVisibility(View.GONE);
+            eklerRelat.setVisibility(View.GONE);
+            noInternet.setVisibility(View.VISIBLE);
         }
 
 
