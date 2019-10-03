@@ -1,683 +1,749 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:card_view="http://schemas.android.com/tools">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/tarihler"
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/lineer"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_marginTop="10dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="50dp"
-
-            android:layout_height="50dp"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="25dp"
-            android:layout_toLeftOf="@id/tarih"
-            android:onClick="evvelsiGun"
-            android:src="@drawable/left_arrow" />
-        <TextView
-            android:id="@+id/tarih"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:textSize="25sp"
-            android:layout_centerVertical="true"
-            android:text="23.06.2019" />
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="25dp"
-            android:layout_toRightOf="@id/tarih"
-            android:onClick="ertesiGun"
-            android:src="@drawable/right_arrow" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:id="@+id/noInternet"
-        android:background="@drawable/foodback"
-        android:elevation="0dp"
-        android:layout_height="400dp">
-        <android.support.v7.widget.CardView
+        <RelativeLayout
+            android:id="@+id/tarihler"
             android:layout_width="match_parent"
-            app:cardBackgroundColor="@android:color/transparent"
-            android:elevation="0dp"
-            android:layout_height="400dp">
+            android:layout_height="75dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="30dp"
+
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:layout_toLeftOf="@id/tarihbilgisi"
+                android:onClick="evvelsiGun"
+                android:src="@drawable/left_arrow" />
+
+            <RelativeLayout
+                android:id="@+id/tarihbilgisi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/gunText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Bugün"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tarih"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gunText"
+                    android:layout_centerHorizontal="true"
+                    android:text="23.06.2019"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/tarihbilgisi"
+                android:onClick="ertesiGun"
+                android:src="@drawable/right_arrow" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/noInternet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:background="@android:color/transparent"
+            android:visibility="gone">
+
             <ImageView
                 android:layout_width="250dp"
                 android:layout_height="250dp"
-                android:layout_gravity="center"
-                android:src="@drawable/closed"/>
-        </android.support.v7.widget.CardView>
-    </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/anaRelat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp">
+                android:layout_centerInParent="true"
+                android:src="@drawable/closed" />
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/anayemekler"
-            android:layout_width="wrap_content"
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/anaRelat"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#EAFCFD"
-            app:cardElevation="0dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-
-
-            >
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:padding="0dp">
-
-                <RelativeLayout
-                    android:id="@+id/anayemekRelative"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:padding="5dp">
-
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/anayemek2"
-                        android:layout_width="125dp"
-                        android:layout_height="125dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        android:padding="4dp"
-                        android:src="@drawable/ayran_128x128"
-                        app:civ_border_width="2dp"
-                        app:civ_border_color="#FF000000"/>
-                    <TextView
-                        android:id="@+id/anayemek2Text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/anayemek2"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="Gemici Usülü Kuru Fasülye"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/anayemek2Text"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="#32D532"
-                        android:fontFamily="sans-serif-condensed"
-
-                        android:text="176"
-                        android:textAlignment="center" />
-
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="1dp"
-                    android:layout_height="125dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp">
-                    <View
-                        android:id="@+id/ortaCizgi"
-                        android:layout_width="0.50dp"
-                        android:layout_height="60dp"
-                        android:layout_centerInParent="true"
-                        android:background="#000" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="15dp"
-                    android:padding="5dp">
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/anayemek1"
-                        android:layout_width="125dp"
-                        android:layout_height="125dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        android:padding="4dp"
-                        android:src="@drawable/ayran_128x128"
-                        app:civ_border_width="2dp"
-                        app:civ_border_color="#FF000000"/>
-
-                    <TextView
-                        android:id="@+id/anayemek1Text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/anayemek1"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="Bahçivan Kebap"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/anayemek1Text"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="#32D532"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="220"
-                        android:textAlignment="center" />
-
-
-                </RelativeLayout>
-
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardElevation="0dp"
-            android:outlineProvider="bounds"
-
-            app:cardBackgroundColor="@android:color/transparent">
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-
-                android:src="@drawable/pushpin1"/>
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardElevation="0dp"
-            android:outlineProvider="bounds"
-            android:layout_alignParentRight="true"
-
-            app:cardBackgroundColor="@android:color/transparent">
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-
-                android:src="@drawable/pushpin2"/>
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardElevation="0dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:visibility="invisible"
-            app:cardBackgroundColor="@android:color/transparent">
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-
-                android:src="@null"/>
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardElevation="0dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:visibility="invisible"
-
-            app:cardBackgroundColor="@android:color/transparent">
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-
-                android:src="@null"/>
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/card_view_outer"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:layout_centerHorizontal="true"
-            card_view:cardBackgroundColor="@android:color/transparent"
-            card_view:cardCornerRadius="0dp"
-            card_view:cardElevation="0dp" >
+            android:layout_marginTop="25dp">
 
             <android.support.v7.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view_inner"
-                android:layout_width="200dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="0dp"
-                card_view:cardBackgroundColor="#8288D3"
-                card_view:cardCornerRadius="10dp"
-                card_view:cardElevation="0dp" >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="#8288D3"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="Ana Yemekler"
-                    android:textColor="#fff"
-
-                    android:textSize="20sp" />
-            </android.support.v7.widget.CardView>
-        </android.support.v7.widget.CardView>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/corbaRelat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/corbalarCard"
-            app:cardBackgroundColor="#EEEEC3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            app:cardElevation="0dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            >
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:padding="0dp">
-
-                <RelativeLayout
-                    android:id="@+id/corbalarRelative"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:padding="5dp">
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/corba1"
-                        android:layout_width="125dp"
-                        android:layout_height="125dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        android:padding="4dp"
-                        android:src="@drawable/ayran_128x128"
-                        app:civ_border_width="2dp"
-                        app:civ_border_color="#FF000000"/>
-
-                    <TextView
-                        android:id="@+id/corba1Text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/corba1"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="Alaca Çorba"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/corba1Text"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="#32D532"
-                        android:fontFamily="sans-serif-condensed"
-
-                        android:text="56"
-                        android:textAlignment="center" />
-
-
-                </RelativeLayout>
-<RelativeLayout
-    android:layout_width="1dp"
-    android:layout_height="125dp"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="10dp">
-    <View
-        android:id="@+id/ortaCizgiCorba"
-        android:layout_width="0.50dp"
-        android:layout_height="60dp"
-        android:layout_centerInParent="true"
-        android:background="#000" />
-
-</RelativeLayout>
-
-
-                <RelativeLayout
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="15dp"
-                    android:padding="5dp">
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/corba2"
-                        android:layout_width="125dp"
-                        android:layout_height="125dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        android:padding="4dp"
-                        android:src="@drawable/ayran_128x128"
-                        app:civ_border_width="2dp"
-                        app:civ_border_color="#FF000000"/>
-
-                    <TextView
-                        android:id="@+id/corba2Text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/corba2"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="Domates Çorba"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
-
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/corba2Text"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="#32D532"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="20"
-                        android:textAlignment="center" />
-
-
-                </RelativeLayout>
-
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardElevation="0dp"
-
-            app:cardBackgroundColor="@android:color/transparent">
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-
-                android:src="@drawable/plaster1"/>
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            app:cardElevation="0dp"
-
-            app:cardBackgroundColor="@android:color/transparent">
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-
-                android:src="@drawable/plaster2"/>
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            app:cardElevation="0dp"
-            android:outlineProvider="bounds"
-
-            app:cardBackgroundColor="@android:color/transparent">
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-
-                android:src="@null"/>
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            app:cardElevation="0dp"
-android:visibility="invisible"
-            app:cardBackgroundColor="@android:color/transparent">
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-
-                android:src="@null"/>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:layout_centerHorizontal="true"
-            app:cardBackgroundColor="#59B057">
-
-            <TextView
+                android:id="@+id/anayemekler"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="#59B057"
-                android:fontFamily="sans-serif-condensed"
-                android:text="Çorbalar"
-                android:textAlignment="center"
-                android:textColor="#fff"
-
-                android:textSize="20sp" />
-        </android.support.v7.widget.CardView>
-    </RelativeLayout>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#EAFCFD"
+                app:cardElevation="0dp"
 
 
-    <RelativeLayout
-        android:id="@+id/eklerRelat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-
-        android:padding="10dp">
-
-        <RelativeLayout
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dp">
-
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="25dp">
+                >
 
                 <RelativeLayout
-                    android:id="@+id/icecek"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:layout_centerVertical="true"
-                    android:padding="5dp">
+                    android:padding="0dp">
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/icecekIcon"
-                        android:layout_width="125dp"
+                    <RelativeLayout
+                        android:id="@+id/anayemekRelative"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:padding="5dp">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/anayemek2"
+                            android:layout_width="125dp"
+                            android:layout_height="125dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:padding="4dp"
+                            android:src="@drawable/ayran_128x128"
+                            app:civ_border_color="#8288D3"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:id="@+id/anayemek2Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/anayemek2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Gemici Usülü Kuru Fasülye"
+                            android:textAlignment="center"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/anayemek2kalori"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/anayemek2Text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="#32D532"
+
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="176"
+                            android:textAlignment="center" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="1dp"
                         android:layout_height="125dp"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        android:padding="4dp"
-                        android:src="@drawable/ayran_128x128"
-                        app:civ_border_width="2dp"
-                        app:civ_border_color="#FF000000"/>
+                        android:layout_marginTop="10dp">
 
-                    <TextView
-                        android:id="@+id/icecekText"
-                        android:layout_width="wrap_content"
+                        <View
+                            android:id="@+id/ortaCizgi"
+                            android:layout_width="0.50dp"
+                            android:layout_height="60dp"
+                            android:layout_centerInParent="true"
+                            android:background="#000" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/icecekIcon"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="Aşure"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:padding="5dp">
 
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/icecekText"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="#32D532"
-                        android:fontFamily="sans-serif-condensed"
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/anayemek1"
+                            android:layout_width="125dp"
+                            android:layout_height="125dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:padding="4dp"
+                            android:src="@drawable/ayran_128x128"
+                            app:civ_border_color="#8288D3"
+                            app:civ_border_width="2dp" />
 
-                        android:text="136"
-                        android:textAlignment="center" />
+                        <TextView
+                            android:id="@+id/anayemek1Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/anayemek1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Bahçivan Kebap"
+                            android:textAlignment="center"
+                            android:textSize="12sp" />
 
+                        <TextView
+                            android:id="@+id/anayemek1kalori"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/anayemek1Text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="#32D532"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="220"
+                            android:textAlignment="center" />
+
+
+                    </RelativeLayout>
 
                 </RelativeLayout>
-
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:outlineProvider="bounds"
+                app:cardBackgroundColor="@android:color/transparent"
 
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:src="@drawable/pushpin1" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:outlineProvider="bounds"
+                app:cardBackgroundColor="@android:color/transparent"
+
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:src="@drawable/pushpin2" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:visibility="invisible"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:src="@null" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:visibility="invisible"
+                app:cardBackgroundColor="@android:color/transparent"
+
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:src="@null" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view_outer"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
-                app:cardBackgroundColor="#57B0AF">
+                card_view:cardBackgroundColor="@android:color/transparent"
+                card_view:cardCornerRadius="0dp"
+                card_view:cardElevation="0dp">
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view_inner"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    card_view:cardBackgroundColor="#8288D3"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#8288D3"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Ana Yemekler"
+                        android:textColor="#fff"
+
+                        android:textSize="20sp" />
+                </android.support.v7.widget.CardView>
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/corbaRelat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/corbalarCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#EEEEC3"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="0dp">
+
+                    <RelativeLayout
+                        android:id="@+id/corbalarRelative"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:padding="5dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/corba1"
+                            android:layout_width="125dp"
+                            android:layout_height="125dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:padding="4dp"
+                            android:src="@drawable/ayran_128x128"
+                            app:civ_border_color="#59B057"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:id="@+id/corba1Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/corba1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Alaca Çorba"
+                            android:textAlignment="center"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/corba1kalori"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/corba1Text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="#32D532"
+
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="56"
+                            android:textAlignment="center" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="1dp"
+                        android:layout_height="125dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp">
+
+                        <View
+                            android:id="@+id/ortaCizgiCorba"
+                            android:layout_width="0.50dp"
+                            android:layout_height="60dp"
+                            android:layout_centerInParent="true"
+                            android:background="#000" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:padding="5dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/corba2"
+                            android:layout_width="125dp"
+                            android:layout_height="125dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:padding="4dp"
+                            android:src="@drawable/ayran_128x128"
+                            app:civ_border_color="#59B057"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:id="@+id/corba2Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/corba2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Domates Çorba"
+                            android:textAlignment="center"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/corba2kalori"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/corba2Text"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="#32D532"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="20"
+                            android:textAlignment="center" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@android:color/transparent"
+
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:src="@drawable/plaster1" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                app:cardBackgroundColor="@android:color/transparent"
+
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:src="@drawable/plaster2" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:outlineProvider="bounds"
+                app:cardBackgroundColor="@android:color/transparent"
+
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:src="@null" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:visibility="invisible"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:src="@null" />
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                card_view:cardBackgroundColor="#59B057"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardElevation="0dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="#57B0AF"
+                    android:background="#59B057"
                     android:fontFamily="sans-serif-condensed"
-                    android:text="Yardımcı"
-                    android:textAlignment="center"
+                    android:text="Çorbalar"
                     android:textColor="#fff"
+
                     android:textSize="20sp" />
             </android.support.v7.widget.CardView>
-
         </RelativeLayout>
+
 
         <RelativeLayout
-            android:layout_width="150dp"
+            android:id="@+id/eklerRelat"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="15dp">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
 
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="25dp">
+            android:padding="10dp">
 
-                <RelativeLayout
-                    android:id="@+id/yardimciRelative"
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp">
+
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_centerVertical="true"
-                    android:padding="5dp">
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp">
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/yardimciIcon"
-                        android:layout_width="125dp"
-                        android:layout_height="125dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        android:padding="4dp"
-                        android:src="@drawable/ayran_128x128"
-                        app:civ_border_width="2dp"
-                        app:civ_border_color="#FF000000"/>
-
-                    <TextView
-                        android:id="@+id/yardimciText"
-                        android:layout_width="wrap_content"
+                    <RelativeLayout
+                        android:id="@+id/icecek"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/yardimciIcon"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="Ayran"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="20dp"
+                        android:padding="5dp">
 
-                    <TextView
-                        android:layout_width="50dp"
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/icecekIcon"
+                            android:layout_width="125dp"
+                            android:layout_height="125dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:padding="4dp"
+                            android:src="@drawable/ayran_128x128"
+                            app:civ_border_color="#57B0AF"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:id="@+id/icecekText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/icecekIcon"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Aşure"
+                            android:textAlignment="center"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/icecekkalori"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/icecekText"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="#32D532"
+                            android:fontFamily="sans-serif-condensed"
+
+                            android:text="136"
+                            android:textAlignment="center" />
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:outlineProvider="bounds"
+                    card_view:cardBackgroundColor="@android:color/transparent"
+                    card_view:cardCornerRadius="0dp">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        card_view:cardBackgroundColor="#57B0AF"
+                        card_view:cardCornerRadius="10dp"
+                        card_view:cardElevation="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#57B0AF"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Yardımcı"
+                            android:textAlignment="center"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+                    </android.support.v7.widget.CardView>
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp">
+
+                    <RelativeLayout
+                        android:id="@+id/yardimci"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/yardimciText"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="#32D532"
-                        android:fontFamily="sans-serif-condensed"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@android:color/transparent"
+                        android:padding="5dp">
 
-                        android:text="92"
-                        android:textAlignment="center" />
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/yardimciIcon"
+                            android:layout_width="125dp"
+                            android:layout_height="125dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:padding="4dp"
+                            android:src="@drawable/ayran_128x128"
+                            app:civ_border_color="#FED5B5"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:id="@+id/yardimciText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/yardimciIcon"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Aşure"
+                            android:textAlignment="center"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/yardimcikalori"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/yardimciText"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="#32D532"
+
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="136"
+                            android:textAlignment="center" />
 
 
-                </RelativeLayout>
+                    </RelativeLayout>
 
-            </android.support.v7.widget.CardView>
+                </android.support.v7.widget.CardView>
 
 
-            <android.support.v7.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_centerHorizontal="true"
-                app:cardBackgroundColor="#237E82">
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
 
-                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="0dp"
+                    card_view:cardBackgroundColor="#59B057"
 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="#237E82"
-                    android:textSize="20sp"
-                    android:fontFamily="sans-serif-condensed"
-                    android:textColor="#fff"
-                    android:textAlignment="center"
-                    android:text="İçecek ve Tatlı" />
-            </android.support.v7.widget.CardView>
+                    card_view:cardCornerRadius="0dp">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+
+                        card_view:cardBackgroundColor="@android:color/transparent"
+                        card_view:cardCornerRadius="10dp"
+                        card_view:cardElevation="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Ekler"
+                            android:textAlignment="center"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+                    </android.support.v7.widget.CardView>
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
         </RelativeLayout>
-    </RelativeLayout>
 
 
-</LinearLayout>
+    </LinearLayout>
 </ScrollView>
