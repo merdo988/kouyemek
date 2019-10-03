@@ -1,227 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar">
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:layout_marginTop="10dp">
-
-
-        <ImageView
-            android:id="@+id/sc1UstIcon"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_centerHorizontal="true"
-            app:srcCompat="@drawable/sc1anaicon" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.50dp"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="2dp"
-        android:layout_toLeftOf="@id/sc1UstIcon"
-        android:background="#000"
-        />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.50dp"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="2dp"
-        android:layout_toRightOf="@id/sc1UstIcon"
-        android:background="#000"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
 
 
 
+
+            <ImageView
+                android:id="@+id/sc1UstIcon"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/sc1anaicon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_toLeftOf="@id/sc1UstIcon"
+                android:background="#000" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_toRightOf="@id/sc1UstIcon"
+                android:background="#000" />
+
+
+            </RelativeLayout>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardYemekhane"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:onClick="yemekhaneyeGit"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="3dp">
+
+            <RelativeLayout
+
+                android:id="@+id/card_view_outerrrr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/sc1yemekhaneicon"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/sc1yemekhane" />
+
+                <ImageView
+                    android:id="@+id/sc1SagOk"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/chevron_icon" />
+
+                <TextView
+                    android:id="@+id/sc1Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Yemekhane"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardCafeler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:onClick="cafelereGit"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="3dp">
+
+            <RelativeLayout
+
+                android:id="@+id/cardCafelerIc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/sc1cardcafelericon"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/coffeecup_icon" />
+
+                <ImageView
+                    android:id="@+id/sc1CafelerSagOk"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/chevron_icon" />
+
+                <TextView
+                    android:id="@+id/sc1CardCafelerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Kafeler"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardFirsatlar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="3dp">
+
+            <RelativeLayout
+
+                android:id="@+id/cardFirsatlarIc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/sc1cardFirsatlarIcIcon"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/firsat_icon" />
+
+                <ImageView
+                    android:id="@+id/sc1FirsalarSagOk"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/chevron_icon" />
+
+                <TextView
+                    android:id="@+id/sc1FirsatlarText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Fırsatlar"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="3dp">
+
+            <RelativeLayout
+
+                android:id="@+id/cardInfoIc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/sc1cardInfoIcIcon"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/info_icon" />
+
+                <ImageView
+                    android:id="@+id/sc1InfoSagOk"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/chevron_icon" />
+
+                <TextView
+                    android:id="@+id/sc1InfoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Uygulama Hakkında"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
-
-    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/cardYemekhane"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:onClick="yemekhaneyeGit"
-        android:layout_marginRight="20dp"
-        card_view:cardElevation="3dp"
-        card_view:cardCornerRadius="15dp">
-        <RelativeLayout
-
-            android:id="@+id/card_view_outerrrr"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="12dp"
-            >
-
-            <ImageView
-                android:id="@+id/sc1yemekhaneicon"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:src="@drawable/sc1yemekhane" />
-            <TextView
-                android:id="@+id/sc1Text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-condensed"
-                android:text="Yemekhane"
-                android:textSize="16sp"
-                android:layout_centerInParent="true" />
-
-        <ImageView
-            android:id="@+id/sc1SagOk"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:src="@drawable/chevron_icon" />
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/cardCafeler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        card_view:cardElevation="3dp"
-        android:onClick="cafelereGit"
-        card_view:cardCornerRadius="15dp">
-        <RelativeLayout
-
-            android:id="@+id/cardCafelerIc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="12dp"
-            >
-
-            <ImageView
-                android:id="@+id/sc1cardcafelericon"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:src="@drawable/coffeecup_icon" />
-
-            <TextView
-                android:id="@+id/sc1CardCafelerText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_centerInParent="true"
-                android:fontFamily="sans-serif-condensed"
-                android:text="Kafeler"
-                android:textSize="16sp"
-               />
-
-            <ImageView
-                android:id="@+id/sc1CafelerSagOk"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/chevron_icon" />
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/cardFirsatlar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        card_view:cardElevation="3dp"
-        card_view:cardCornerRadius="15dp">
-        <RelativeLayout
-
-            android:id="@+id/cardFirsatlarIc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="12dp"
-            >
-
-            <ImageView
-                android:id="@+id/sc1cardFirsatlarIcIcon"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:src="@drawable/firsat_icon"
-                 />
-
-            <TextView
-                android:id="@+id/sc1FirsatlarText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:fontFamily="sans-serif-condensed"
-                android:text="Fırsatlar"
-                android:textSize="16sp"/>
-
-            <ImageView
-                android:id="@+id/sc1FirsalarSagOk"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/chevron_icon" />
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/cardInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="10dp"
-        card_view:cardElevation="3dp"
-        card_view:cardCornerRadius="15dp">
-        <RelativeLayout
-
-            android:id="@+id/cardInfoIc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="12dp"
-            >
-
-            <ImageView
-                android:id="@+id/sc1cardInfoIcIcon"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:src="@drawable/info_icon"
-                />
-
-            <TextView
-                android:id="@+id/sc1InfoText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:fontFamily="sans-serif-condensed"
-                android:text="Uygulama Hakkında"
-                android:textSize="16sp"
-                />
-
-            <ImageView
-                android:id="@+id/sc1InfoSagOk"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/chevron_icon" />
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-
-
-</LinearLayout>
-</ScrollView>
