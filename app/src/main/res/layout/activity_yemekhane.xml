@@ -1,7 +1,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:card_view="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
 
     <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/lineer"
@@ -16,30 +17,47 @@
             android:layout_marginTop="10dp">
 
             <ImageView
-                android:layout_width="50dp"
+                android:layout_width="30dp"
 
-                android:layout_height="50dp"
+                android:layout_height="30dp"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="25dp"
-                android:layout_toLeftOf="@id/tarih"
+                android:layout_toLeftOf="@id/tarihbilgisi"
                 android:onClick="evvelsiGun"
-                android:src="@drawable/left_arroww" />
+                android:src="@drawable/left_arrow" />
 
-            <TextView
-                android:id="@+id/tarih"
+            <RelativeLayout
+                android:id="@+id/tarihbilgisi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:text="23.06.2019"
-                android:textSize="25sp" />
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/gunText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Bugün"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tarih"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gunText"
+                    android:layout_centerHorizontal="true"
+                    android:text="23.06.2019"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="25dp"
-                android:layout_toRightOf="@id/tarih"
+                android:layout_toRightOf="@id/tarihbilgisi"
                 android:onClick="ertesiGun"
                 android:src="@drawable/right_arrow" />
         </RelativeLayout>
@@ -119,6 +137,7 @@
                             android:textSize="12sp" />
 
                         <TextView
+                            android:id="@+id/anayemek2kalori"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/anayemek2Text"
@@ -126,8 +145,8 @@
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
                             android:background="#32D532"
-                            android:fontFamily="sans-serif-condensed"
 
+                            android:fontFamily="sans-serif-condensed"
                             android:text="176"
                             android:textAlignment="center" />
                     </RelativeLayout>
@@ -179,6 +198,7 @@
                             android:textSize="12sp" />
 
                         <TextView
+                            android:id="@+id/anayemek1kalori"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/anayemek1Text"
@@ -349,6 +369,7 @@
                             android:textSize="12sp" />
 
                         <TextView
+                            android:id="@+id/corba1kalori"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/corba1Text"
@@ -356,8 +377,8 @@
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
                             android:background="#32D532"
-                            android:fontFamily="sans-serif-condensed"
 
+                            android:fontFamily="sans-serif-condensed"
                             android:text="56"
                             android:textAlignment="center" />
 
@@ -412,6 +433,7 @@
                             android:textSize="12sp" />
 
                         <TextView
+                            android:id="@+id/corba2kalori"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/corba2Text"
@@ -507,7 +529,7 @@
                     android:layout_gravity="center"
                     android:background="#59B057"
                     android:fontFamily="sans-serif-condensed"
-                    android:text="Ana Yemekler"
+                    android:text="Çorbalar"
                     android:textColor="#fff"
 
                     android:textSize="20sp" />
@@ -570,6 +592,7 @@
                             android:textSize="12sp" />
 
                         <TextView
+                            android:id="@+id/icecekkalori"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/icecekText"
@@ -596,34 +619,36 @@
                     android:outlineProvider="bounds"
                     card_view:cardBackgroundColor="@android:color/transparent"
                     card_view:cardCornerRadius="0dp">
-                <android.support.v7.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="0dp"
-                    card_view:cardBackgroundColor="#57B0AF"
-                    card_view:cardCornerRadius="10dp"
-                    card_view:cardElevation="0dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <android.support.v7.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
-                        android:background="#57B0AF"
-                        android:fontFamily="sans-serif-condensed"
-                        android:text="Yardımcı"
-                        android:textAlignment="center"
-                        android:textColor="#fff"
-                        android:textSize="20sp" />
+                        android:layout_marginTop="0dp"
+                        card_view:cardBackgroundColor="#57B0AF"
+                        card_view:cardCornerRadius="10dp"
+                        card_view:cardElevation="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#57B0AF"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="Yardımcı"
+                            android:textAlignment="center"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+                    </android.support.v7.widget.CardView>
                 </android.support.v7.widget.CardView>
-</android.support.v7.widget.CardView>
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp">
 
                 <android.support.v7.widget.CardView
@@ -664,6 +689,7 @@
                             android:textSize="12sp" />
 
                         <TextView
+                            android:id="@+id/yardimcikalori"
                             android:layout_width="50dp"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/yardimciText"
@@ -671,8 +697,8 @@
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
                             android:background="#32D532"
-                            android:fontFamily="sans-serif-condensed"
 
+                            android:fontFamily="sans-serif-condensed"
                             android:text="136"
                             android:textAlignment="center" />
 
@@ -687,19 +713,20 @@
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:layout_centerHorizontal="true"
-                    card_view:cardBackgroundColor="#59B057"
                     android:elevation="0dp"
+                    card_view:cardBackgroundColor="#59B057"
 
                     card_view:cardCornerRadius="0dp">
+
                     <android.support.v7.widget.CardView
                         android:layout_width="100dp"
                         android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="0dp"
 
-                        card_view:cardElevation="0dp"
                         card_view:cardBackgroundColor="@android:color/transparent"
-                        card_view:cardCornerRadius="10dp">
+                        card_view:cardCornerRadius="10dp"
+                        card_view:cardElevation="0dp">
 
                         <TextView
                             android:layout_width="wrap_content"
