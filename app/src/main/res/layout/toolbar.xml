@@ -24,7 +24,8 @@
                 android:onClick="turnBack">
             </ImageView>
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:id="@+id/cafeInfoLayoutClick"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:padding="5dp">
@@ -33,8 +34,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Kou Yemek"
-                    android:textSize="20sp"
-                    android:layout_centerHorizontal="true"
+                    android:textSize="15sp"
+                    android:layout_toRightOf="@id/logo"
                     android:fontFamily="sans-serif-condensed" />
                 <ImageView
                     android:id="@+id/logo"
@@ -42,13 +43,12 @@
                     android:layout_height="match_parent"
                     android:src="@drawable/coffee"
                     android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@id/menuName"
                     android:layout_marginRight="5dp"/>
                 <TextView
                     android:id="@+id/cafeClickInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="12sp"
+                    android:textSize="8sp"
                     android:text="Kafe bilgisi için dokunun"
                     android:layout_below="@+id/menuName"
                     android:layout_toRightOf="@id/logo" />
