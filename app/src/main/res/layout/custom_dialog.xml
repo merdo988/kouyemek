@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/bannerAfis"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true" />
+    <ImageView
+        android:id="@+id/closeBanner"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignRight="@id/bannerAfis"
+        android:layout_alignTop="@id/bannerAfis"
+        android:src="@drawable/closebanner" />
+</RelativeLayout>

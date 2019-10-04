@@ -36,6 +36,8 @@
                     android:text="Kou Yemek"
                     android:textSize="15sp"
                     android:layout_toRightOf="@id/logo"
+                    android:layout_alignTop="@id/logo"
+                    android:paddingTop="5dp"
                     android:fontFamily="sans-serif-condensed" />
                 <ImageView
                     android:id="@+id/logo"
