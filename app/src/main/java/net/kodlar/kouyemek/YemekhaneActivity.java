@@ -1,6 +1,7 @@
 package net.kodlar.kouyemek;
 
 import android.app.ActionBar;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -32,6 +33,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Random;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -85,13 +87,14 @@ public class YemekhaneActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yemekhane);
+
+        showBannerDialog();
         this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setCustomView(R.layout.toolbar);
 
         cafeInfoClick = (TextView) findViewById(R.id.cafeClickInfo);
         cafeInfoClick.setVisibility(View.GONE);
-
         img = (ImageView) findViewById(R.id.logo);
         img.setVisibility(View.GONE);
         menuName = (TextView) findViewById(R.id.menuName);
@@ -247,7 +250,7 @@ public class YemekhaneActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
-                Toast.makeText(getApplicationContext(), "Some error occurred!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "İnternet Bağlantınızı Kontrol Edin!!", Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
         });
@@ -375,4 +378,45 @@ public class YemekhaneActivity extends AppCompatActivity {
         }
 
     }
+    public void showBannerDialog(){
+        String url = "http://kodlar.net/kouyemek/banner.php";
+
+
+
+
+        final Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.custom_dialog);
+
+        final ImageView bannerClose = (ImageView) dialog.findViewById(R.id.closeBanner);
+        bannerClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        StringRequest request = new StringRequest(url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String string) {
+                try{
+                    JSONObject object = new JSONObject(string);
+                    JSONArray bannerArray = object.getJSONArray("banner_url");
+                    int a = (int)(Math.random()*bannerArray.length());
+                    final ImageView bannerAfis = (ImageView) dialog.findViewById(R.id.bannerAfis);
+                    Picasso.with(dialog.getContext()).load(bannerArray.getString(a)).into(bannerAfis);
+                }catch (JSONException ex){
+                    ex.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError volleyError) {
+                Toast.makeText(getApplicationContext(), "İnternet Bağlantınızı Kontrol Edin!!", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
+        RequestQueue rQueue = Volley.newRequestQueue(YemekhaneActivity.this);
+        rQueue.add(request);
+        dialog.show();
+    }
+
 }
