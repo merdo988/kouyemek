@@ -14,10 +14,12 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView;
+
 import java.util.ArrayList;
 
 public class AboutUsActivity extends AppCompatActivity {
-    ListView listviewSocial;
+    ExpandableHeightListView listviewSocial;
     ArrayList<AboutUs> socialListView;
     TextView cafeInfoClick;
     ImageView img , socialIcon;
@@ -26,7 +28,7 @@ public class AboutUsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_about_us);
         this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setCustomView(R.layout.toolbar);
@@ -47,23 +49,20 @@ public class AboutUsActivity extends AppCompatActivity {
 
 
 
-        socialListView.add(new AboutUs(R.drawable.social_icon , "Facebook'ta"));
-        socialListView.add(new AboutUs(R.drawable.social_icon , "Facebook'ta"));
-        socialListView.add(new AboutUs(R.drawable.social_icon , "Facebook'ta"));
-        socialListView.add(new AboutUs(R.drawable.social_icon , "Facebook'ta"));
-        socialListView.add(new AboutUs(R.drawable.social_icon , "Facebook'ta"));
+        socialListView.add(new AboutUs(R.drawable.contact_icon , getString(R.string.about_contact_us)));
+        socialListView.add(new AboutUs(R.drawable.website_icon , getString(R.string.about_website)));
+        socialListView.add(new AboutUs(R.drawable.instagram_icon , getString(R.string.about_instagram)));
+        socialListView.add(new AboutUs(R.drawable.playstore_icon , getString(R.string.about_play_store)));
+        socialListView.add(new AboutUs(R.drawable.facebook_icon , getString(R.string.about_facebook)));
+        socialListView.add(new AboutUs(R.drawable.github_icon , getString(R.string.about_github)));
+        socialListView.add(new AboutUs(R.drawable.twitter_icon , getString(R.string.about_twitter)));
+        socialListView.add(new AboutUs(R.drawable.youtube_icon , getString(R.string.about_youtube)));
 
-//        setContentView(R.layout.activity_about_us);
+
         customListViewAdapterAboutUs = new CustomListViewAdapterAboutUs(this,R.layout.list_view_item_about_us,socialListView);
-        listviewSocial = (ListView)findViewById(R.id.about_us_list_view);
+        listviewSocial = (ExpandableHeightListView)findViewById(R.id.expandable_listview);
         listviewSocial.setAdapter(customListViewAdapterAboutUs);
-        listviewSocial.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                return (event.getAction() == MotionEvent.ACTION_MOVE);
-            }
-        });
-        setContentView(R.layout.activity_about_us);
+        listviewSocial.setExpanded(true);
     }
     public void turnBack(View view){
         finish();
