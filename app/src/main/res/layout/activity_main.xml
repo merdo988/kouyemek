@@ -190,10 +190,10 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp"
             card_view:cardCornerRadius="15dp"
-            card_view:cardElevation="3dp">
+            card_view:cardElevation="3dp"
+            android:onClick="hakkindayaGit">
 
             <RelativeLayout
-
                 android:id="@+id/cardInfoIc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
