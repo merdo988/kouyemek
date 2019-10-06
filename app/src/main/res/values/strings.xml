@@ -9,4 +9,14 @@
     <string name="about_play_store">Play Store\'da puan ver</string>
     <string name="about_twitter">Twitter\'da takip et</string>
     <string name="about_website">Sitemizi ziyaret et</string>
+    <string name="action_settings">Settings</string>
+    <string name="scroll">Scroll to the bottom to see the ListView</string>
+    <string name="title_activity_default_list_view">DefaultListView</string>
+    <string name="title_activity_expandable_list_view">ExpandableListView</string>
+    <string name="whoops">Whoops, as you can see ListView only shows the first item.</string>
+    <string name="lorem_ipsum">Kodlar.Net ekibi olarak birinci amacımız programlama dünyasına Türkçe kaynak kazandırmak , yazılıma ve insanlara fayda sağlayarak gelişmektir.
+
+2018 yılının ortalarında planladığımız bu projeyi 14.05.2019 tarihinde resmi olarak aktif ettik.Web sitemizde yayınlanan tüm makale içerikleri özenle yazılmış özgün içeriklerdir.Yanlışlıklar veya aksaklıkları en kısa süre içerisinde çözüme ulaştırmayı kendine prensip belirlemiş Kodlar.Net ilerleyen süreçlerde farklı hizmetler sunarak gelişmeye devam edecektir.
+
+Takipte kalın !</string>
 </resources>

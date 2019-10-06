@@ -1,75 +1,161 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:nestedScrollingEnabled="true">
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="paolorotolo.github.com.expandableheightlistviewexample.DefaultListView">
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dp">
-
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:layout_centerInParent="true"
-        app:srcCompat="@drawable/havelsan" />
-</RelativeLayout>
-
-
-
+        android:padding="16dp"
+        android:orientation="vertical">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:gravity="center"
-                android:text="Kodlar.Net ekibi olarak birinci amacımız programlama dünyasına Türkçe kaynak kazandırmak , yazılıma ve insanlara fayda sağlayarak gelişmektir.
-
-2018 yılının ortalarında planladığımız bu siteyi 14.05.2019 tarihinde resmi olarak aktif ettik.Sitemizde yayınlanan tüm makale içerikleri özenle yazılmış özgün içeriklerdir.Yanlışlıklar veya aksaklıkları en kısa süre içerisinde çözüme ulaştırmayı kendine prensip belirlemiş Kodlar.Net ilerleyen süreçlerde farklı hizmetler sunarak gelişmeye devam edecektir.
-
-Takipte kalın !"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/havelsan" />
         </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/lorem_ipsum"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:padding="8dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Connect with us"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                android:id="@+id/expandable_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+            </com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:text="Gönüllü Yardımlaşma Topluluğumuz"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="170dp"
+                    android:src="@drawable/mt"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+                        <ImageView
+                            android:id="@+id/logoGmail"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/contact_icon"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/about_contact_us"
+                            android:layout_toRightOf="@+id/logoGmail"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+                        <ImageView
+                            android:id="@+id/logoInst"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/instagram_icon"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/about_instagram"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/logoInst"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+                        <ImageView
+                            android:id="@+id/logoTwit"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/twitter_icon"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/about_twitter"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/logoTwit"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+                        <ImageView
+                            android:id="@+id/logoFace"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/facebook_icon"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/about_facebook"
+                            android:layout_toRightOf="@+id/logoFace"/>
+                    </RelativeLayout>
 
 
 
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <TextView
+                android:text="Copyright &#169; KN Software , Tech."
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
     </LinearLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Connect With Us" />
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ListView
-            android:id="@+id/about_us_list_view"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:nestedScrollingEnabled="true">
-        </ListView>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="Tüm Hakları Saklıdır \u00A9 2019"/>
-    </RelativeLayout>
 </ScrollView>
