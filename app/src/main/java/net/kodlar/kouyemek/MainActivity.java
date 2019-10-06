@@ -62,5 +62,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    public void hakkindayaGit(View view){
+        try {
+            Intent intent = new Intent(getApplicationContext(), AboutUsActivity.class);
+            startActivity(intent);
+        }catch (Exception e){
+            System.out.println("Hata Oldu "+e);
+        }
 
+    }
 }

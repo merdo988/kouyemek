@@ -30,7 +30,7 @@ public class CafesActivity extends AppCompatActivity {
     String url = "http://kodlar.net/kouyemek/kafeler.php";
     ProgressDialog dialog;
     ListView listviewCafes;
-    ArrayList<Cafes> cafes ;
+    ArrayList<Cafes> cafes;
     TextView menuName;
     ImageView img;
     TextView cafeInfoClick;
@@ -38,12 +38,9 @@ public class CafesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setCustomView(R.layout.toolbar);
-
-
 
         cafeInfoClick = (TextView) findViewById(R.id.cafeClickInfo);
         cafeInfoClick.setVisibility(View.GONE);
