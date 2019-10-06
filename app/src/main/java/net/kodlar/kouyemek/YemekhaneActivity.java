@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -385,7 +386,9 @@ public class YemekhaneActivity extends AppCompatActivity {
 
 
         final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.custom_dialog);
+
 
         final ImageView bannerClose = (ImageView) dialog.findViewById(R.id.closeBanner);
         bannerClose.setOnClickListener(new View.OnClickListener() {
@@ -394,6 +397,7 @@ public class YemekhaneActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+
         StringRequest request = new StringRequest(url, new Response.Listener<String>() {
             @Override
             public void onResponse(String string) {

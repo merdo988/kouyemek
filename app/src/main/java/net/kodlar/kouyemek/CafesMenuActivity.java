@@ -1,7 +1,6 @@
 package net.kodlar.kouyemek;
 
 import android.app.ActionBar;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -53,7 +52,7 @@ public class CafesMenuActivity extends AppCompatActivity {
             }
         });
         customListViewAdapterCafesMenu = new CustomListViewAdapterCafesMenu(this,R.layout.list_view_item_cafes_menu,CafesMenu);
-        listviewCafesMenu = (ListView)findViewById(R.id.cafes_menu_list_view);
+        listviewCafesMenu = (ListView)findViewById(R.id.galeri_menu_list_view);
         listviewCafesMenu.setAdapter(customListViewAdapterCafesMenu);
 
     }
