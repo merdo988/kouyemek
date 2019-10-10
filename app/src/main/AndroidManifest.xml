@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.kodlar.kouyemek">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_rounded"
@@ -11,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".AboutUsActivity"></activity>
+        <activity android:name=".SponsorlarActivity"></activity>
+        <activity android:name=".AboutUsActivity" />
         <activity android:name=".CafeInfoActivity" />
         <activity android:name=".CafesMenuActivity" />
         <activity android:name=".YemekhaneActivity" />
@@ -29,8 +34,5 @@
             android:name=".MainActivity"
             android:theme="@style/AppTheme" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

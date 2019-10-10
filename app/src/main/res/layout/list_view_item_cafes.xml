@@ -10,14 +10,14 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/cafeLogo"
+                    android:id="@+id/sponsorLogo"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:src="@drawable/logo">
                 </ImageView>
 
                 <TextView
-                    android:id="@+id/cafeName"
+                    android:id="@+id/sponsorText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Mahur Cafe"

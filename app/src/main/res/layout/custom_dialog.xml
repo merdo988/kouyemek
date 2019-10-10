@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/reklamrelat"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/bannerAfis"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"/>
+        android:layout_width="300dp"
+        android:layout_height="500dp" />
+
     <ImageView
         android:id="@+id/closeBanner"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_alignRight="@id/bannerAfis"
         android:layout_alignTop="@id/bannerAfis"
+        android:layout_alignRight="@id/bannerAfis"
 
         android:src="@drawable/closebanner" />
 </RelativeLayout>
