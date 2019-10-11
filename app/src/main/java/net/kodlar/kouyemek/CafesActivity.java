@@ -77,11 +77,12 @@ public class CafesActivity extends AppCompatActivity {
     void parseJsonData(String jsonString) {
         try {
             JSONObject object = new JSONObject(jsonString);
+            JSONArray cafelerIDArray = object.getJSONArray("cafe_id");
             JSONArray cafelerArray = object.getJSONArray("cafe_name");
             JSONArray cafelerLogoArray = object.getJSONArray("cafe_logo");
 
             for(int i = 0; i < cafelerArray.length(); ++i) {
-                cafes.add(new Cafes(cafelerArray.getString(i),cafelerLogoArray.getString(i)));
+                cafes.add(new Cafes(cafelerIDArray.getString(i),cafelerArray.getString(i),cafelerLogoArray.getString(i)));
             }
 
             customListViewAdapterCafes = new CustomListViewAdapterCafes(this,R.layout.list_view_item_cafes,cafes);

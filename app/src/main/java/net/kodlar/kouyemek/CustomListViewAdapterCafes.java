@@ -52,6 +52,7 @@ public class CustomListViewAdapterCafes extends ArrayAdapter<Cafes> {
                     Intent intent = new Intent(getContext(), CafesMenuActivity.class);
                     intent.putExtra("cafeName", c.getCafeName());
                     intent.putExtra("cafeLogo", c.getLogoResourceUrl());
+                    intent.putExtra("cafeID", c.getCafeID());
                     context.startActivity(intent);
                 }catch (Exception e){
                     System.out.println("Hata Oldu "+e);
