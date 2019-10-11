@@ -7,6 +7,8 @@
 
             <ListView
                 android:id="@+id/galeri_menu_list_view"
+                android:divider="@null"
+                android:dividerHeight="0dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 

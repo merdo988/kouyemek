@@ -4,8 +4,10 @@ import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,8 +26,8 @@ import java.util.ArrayList;
 public class SponsorlarActivity extends AppCompatActivity {
     ListView listviewSponsorlar;
     ArrayList<Sponsorlar> sponsorlarListView;
-    TextView sponsorIsmi;
-    ImageView socialIcon;
+    TextView sponsorIsmi,menuName,cafeInfoClick;
+    ImageView socialIcon,img;
     ProgressDialog dialog;
     CostumListViewAdapterSponsorlar customListViewAdapterSponsorlar;
     @Override
@@ -36,6 +38,15 @@ public class SponsorlarActivity extends AppCompatActivity {
         this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setCustomView(R.layout.toolbar);
+
+        cafeInfoClick = (TextView) findViewById(R.id.cafeClickInfo);
+        cafeInfoClick.setVisibility(View.GONE);
+        img = (ImageView) findViewById(R.id.logo);
+        img.setVisibility(View.GONE);
+        menuName = (TextView) findViewById(R.id.menuName);
+        menuName.setText("Sponsorlar");
+        menuName.setGravity(RelativeLayout.CENTER_IN_PARENT);
+
         sponsorlarListView = new ArrayList<Sponsorlar>();
 
         dialog = new ProgressDialog(this);
@@ -85,6 +96,9 @@ public class SponsorlarActivity extends AppCompatActivity {
 
             dialog.dismiss();
         }
+    public void turnBack(View view){
+        finish();
+    }
 
     }
 
