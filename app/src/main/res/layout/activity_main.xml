@@ -144,6 +144,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             app:cardCornerRadius="15dp"
+            android:onClick="sponsorlaraGit"
             app:cardElevation="3dp">
 
             <RelativeLayout

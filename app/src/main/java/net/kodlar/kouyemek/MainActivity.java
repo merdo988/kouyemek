@@ -71,4 +71,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    public void sponsorlaraGit(View view){
+        try {
+            Intent intent = new Intent(getApplicationContext(), SponsorlarActivity.class);
+            startActivity(intent);
+        }catch (Exception e){
+            System.out.println("Hata Oldu "+e);
+        }
+    }
 }

@@ -36,8 +36,8 @@ public class CustomListViewAdapterCafes extends ArrayAdapter<Cafes> {
         }
         c = getItem(position);
         if (c != null) {
-            ImageView cafeLogo = (ImageView)v.findViewById(R.id.cafeLogo);
-            TextView cafeName = (TextView)v.findViewById(R.id.cafeName);
+            ImageView cafeLogo = (ImageView)v.findViewById(R.id.sponsorLogo);
+            TextView cafeName = (TextView)v.findViewById(R.id.sponsorText);
 
             if(cafeLogo != null && cafeName != null){
                 cafeName.setText(c.getCafeName());
