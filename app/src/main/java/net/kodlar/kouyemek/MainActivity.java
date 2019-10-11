@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         backIcon = (ImageView) findViewById(R.id.backIcon);
         backIcon.setVisibility(View.GONE);
+
         menuIcoN = (ImageView) findViewById(R.id.logo);
         menuIcoN.setVisibility(View.GONE);
 
