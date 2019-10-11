@@ -7,12 +7,12 @@ public class CafesMenu {
     private String ProductName;
     private String ProductInfo;
     private String ProductPrice;
-    private int ProductImageResourceUrl;
+    private String  ProductImageResourceUrl;
 
     public CafesMenu(){
 
     }
-    public CafesMenu(String ProductName ,String ProductInfo,String ProductPrice, int ProductImageResourceUrl){
+    public CafesMenu(String ProductName ,String ProductInfo,String ProductPrice, String ProductImageResourceUrl){
         this.ProductInfo = ProductInfo;
         this.ProductName = ProductName;
         this.ProductPrice = ProductPrice;
@@ -42,10 +42,10 @@ public class CafesMenu {
     public String getProductPrice(){
         return this.ProductPrice;
     }
-    public void setProductImageResourceUrl(int ProductImageResourceUrl){
+    public void setProductImageResourceUrl(String ProductImageResourceUrl){
         this.ProductImageResourceUrl = ProductImageResourceUrl;
     }
-    public int getProductImageResourceUrl() {
+    public String getProductImageResourceUrl() {
         return ProductImageResourceUrl;
     }
 }

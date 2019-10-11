@@ -1,21 +1,22 @@
 package net.kodlar.kouyemek;
 
 public class Cafes {
-    private int cafeID;
+    private String cafeID;
     private String cafeName;
     private String LogoResourceUrl;
 
     public Cafes(){
 
     }
-    public Cafes(String cafeName , String LogoResID){
+    public Cafes(String cafeID,String cafeName , String LogoResID){
+        this.cafeID =cafeID;
         this.cafeName = cafeName;
         this.LogoResourceUrl = LogoResID;
     }
-    public int getCafeID(){
+    public String getCafeID(){
         return this.cafeID;
     }
-    public void setCafeID(int cafeID){
+    public void setCafeID(String cafeID){
         this.cafeID = cafeID;
     }
     public void setCafeName(String cafeName){
