@@ -180,5 +180,42 @@
                     android:layout_height="wrap_content" />
             </RelativeLayout>
         </LinearLayout>
+</RelativeLayout>
+<HorizontalScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="300dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:orientation="horizontal">
+<ImageView
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_margin="10dp"
+    android:src="@drawable/alaca_corba_128x128">
+
+</ImageView>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/alaca_corba_128x128">
+        </ImageView>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/alaca_corba_128x128">
+        </ImageView>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/alaca_corba_128x128">
+
+        </ImageView>
+
+    </LinearLayout>
+</HorizontalScrollView>
 </LinearLayout>
 </ScrollView>

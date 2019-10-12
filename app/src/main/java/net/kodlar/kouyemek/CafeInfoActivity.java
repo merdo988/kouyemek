@@ -41,6 +41,7 @@ public class CafeInfoActivity extends AppCompatActivity {
         customListViewAdapterGaleri= new CustomListViewAdapterGaleri(this,R.layout.list_view_item_cafe_galari,Galeri);
         listviewGaleri = (ListView)findViewById(R.id.galeri_menu_list_view);
         listviewGaleri.setAdapter(customListViewAdapterGaleri);
+
     }
 
     public void Ara(View view) {
