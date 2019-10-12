@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -139,24 +138,41 @@
         android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."/>
 
 </RelativeLayout>
+<HorizontalScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="300dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:orientation="horizontal">
+<ImageView
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_margin="10dp"
+    android:src="@drawable/alaca_corba_128x128">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp">
-                <ListView
-                    android:id="@+id/galeri_menu_list_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+</ImageView>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/alaca_corba_128x128">
+        </ImageView>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/alaca_corba_128x128">
+        </ImageView>
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/alaca_corba_128x128">
 
-                    />
-            </RelativeLayout>
+        </ImageView>
 
-        </LinearLayout>
-
+    </LinearLayout>
+</HorizontalScrollView>
 </LinearLayout>
 </ScrollView>
