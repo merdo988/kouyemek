@@ -31,9 +31,9 @@ public class CafeInfoActivity extends AppCompatActivity {
         this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setCustomView(R.layout.toolbar);
-        kare1Layout = (RelativeLayout) findViewById(R.id.kare1Layout);
-        kare2Layout=(RelativeLayout)findViewById(R.id.kare2Layout);
-        kare3Layout=(RelativeLayout)findViewById(R.id.kare3Layout);
+        kare1Layout = (RelativeLayout) findViewById(R.id.callIcon);
+        kare2Layout=(RelativeLayout)findViewById(R.id.webIcon);
+        kare3Layout=(RelativeLayout)findViewById(R.id.mapIcon);
         Galeri = new ArrayList<Galeri>();
         Galeri.add(new Galeri("http://kodlar.net/kouyemek/meal_img/bahcivan_kebabi_128x128.png"));
         Galeri.add(new Galeri("http://kodlar.net/kouyemek/meal_img/bahcivan_kebabi_128x128.png"));
