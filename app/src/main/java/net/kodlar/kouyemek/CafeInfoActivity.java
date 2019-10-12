@@ -34,13 +34,6 @@ public class CafeInfoActivity extends AppCompatActivity {
         kare1Layout = (RelativeLayout) findViewById(R.id.kare1Layout);
         kare2Layout=(RelativeLayout)findViewById(R.id.kare2Layout);
         kare3Layout=(RelativeLayout)findViewById(R.id.kare3Layout);
-        Galeri = new ArrayList<Galeri>();
-        Galeri.add(new Galeri("http://kodlar.net/kouyemek/meal_img/bahcivan_kebabi_128x128.png"));
-        Galeri.add(new Galeri("http://kodlar.net/kouyemek/meal_img/bahcivan_kebabi_128x128.png"));
-        Galeri.add(new Galeri("http://kodlar.net/kouyemek/meal_img/bahcivan_kebabi_128x128.png"));
-        customListViewAdapterGaleri= new CustomListViewAdapterGaleri(this,R.layout.list_view_item_cafe_galari,Galeri);
-        listviewGaleri = (ListView)findViewById(R.id.galeri_menu_list_view);
-        listviewGaleri.setAdapter(customListViewAdapterGaleri);
     }
 
     public void Ara(View view) {
