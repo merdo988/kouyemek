@@ -3,7 +3,8 @@
     xmlns:card_view="http://schemas.android.com/tools"
     android:id="@+id/scroll"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <LinearLayout
         android:id="@+id/lineer"
@@ -38,6 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/indie_flower"
                     android:text="Bugün"
                     android:textSize="14sp" />
 
@@ -47,6 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/gunText"
                     android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/indie_flower"
                     android:text="23.06.2019"
                     android:textSize="14sp" />
 
@@ -146,7 +149,7 @@
                                 android:layout_below="@id/anayemek2"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="5dp"
-                                android:fontFamily="sans-serif-condensed"
+                                android:fontFamily="@font/kalam_bold"
                                 android:text="Gemici Usülü Kuru Fasülye"
                                 android:textAlignment="center"
                                 android:textSize="12sp" />
@@ -157,11 +160,10 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/anayemek2Text"
                                 android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/source_sans_pro_bold_italic"
                                 android:layout_marginTop="5dp"
                                 android:layout_marginBottom="5dp"
                                 android:background="#32D532"
-
-                                android:fontFamily="sans-serif-condensed"
                                 android:text="176"
                                 android:textAlignment="center" />
                         </RelativeLayout>
@@ -208,7 +210,7 @@
                                 android:layout_below="@id/anayemek1"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="5dp"
-                                android:fontFamily="sans-serif-condensed"
+                                android:fontFamily="@font/kalam_bold"
                                 android:text="Bahçivan Kebap"
                                 android:textAlignment="center"
                                 android:textSize="12sp" />
@@ -222,7 +224,7 @@
                                 android:layout_marginTop="5dp"
                                 android:layout_marginBottom="5dp"
                                 android:background="#32D532"
-                                android:fontFamily="sans-serif-condensed"
+                                android:fontFamily="@font/source_sans_pro_bold_italic"
                                 android:text="220"
                                 android:textAlignment="center" />
 
@@ -294,7 +296,7 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:background="#8288D3"
-                        android:fontFamily="sans-serif-condensed"
+                        android:fontFamily="@font/source_sans_pro_bold_italic"
                         android:text="Ana Yemekler"
                         android:textColor="#fff"
 
@@ -360,7 +362,7 @@
                                 android:layout_below="@id/corba2"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="5dp"
-                                android:fontFamily="sans-serif-condensed"
+                                android:fontFamily="@font/kalam_bold"
                                 android:text="Domates Çorba"
                                 android:textAlignment="center"
                                 android:textSize="12sp" />
@@ -374,7 +376,7 @@
                                 android:layout_marginTop="5dp"
                                 android:layout_marginBottom="5dp"
                                 android:background="#32D532"
-                                android:fontFamily="sans-serif-condensed"
+                                android:fontFamily="@font/source_sans_pro_bold_italic"
                                 android:text="20"
                                 android:textAlignment="center" />
 
@@ -426,7 +428,7 @@
                                 android:layout_below="@id/corba1"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="5dp"
-                                android:fontFamily="sans-serif-condensed"
+                                android:fontFamily="@font/kalam_bold"
                                 android:text="Alaca Çorba"
                                 android:textAlignment="center"
                                 android:textSize="12sp" />
@@ -440,8 +442,7 @@
                                 android:layout_marginTop="5dp"
                                 android:layout_marginBottom="5dp"
                                 android:background="#32D532"
-
-                                android:fontFamily="sans-serif-condensed"
+                                android:fontFamily="@font/source_sans_pro_bold_italic"
                                 android:text="56"
                                 android:textAlignment="center" />
 
@@ -504,7 +505,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:background="#59B057"
-                    android:fontFamily="sans-serif-condensed"
+                    android:fontFamily="@font/source_sans_pro_bold_italic"
                     android:text="Çorbalar"
                     android:textColor="#fff"
 
@@ -571,7 +572,7 @@
                                 android:layout_below="@id/icecekIcon"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="5dp"
-                                android:fontFamily="sans-serif-condensed"
+                                android:fontFamily="@font/kalam_bold"
                                 android:text="Aşure"
                                 android:textAlignment="center"
                                 android:textSize="12sp" />
@@ -585,7 +586,7 @@
                                 android:layout_marginTop="5dp"
                                 android:layout_marginBottom="5dp"
                                 android:background="#32D532"
-                                android:fontFamily="sans-serif-condensed"
+                                android:fontFamily="@font/source_sans_pro_bold_italic"
 
                                 android:text="136"
                                 android:textAlignment="center" />
@@ -619,7 +620,7 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:background="#57B0AF"
-                            android:fontFamily="sans-serif-condensed"
+                            android:fontFamily="@font/source_sans_pro_bold_italic"
                             android:gravity="center"
                             android:text="Yardımcı"
                             android:textAlignment="center"
@@ -692,7 +693,7 @@
                                 android:layout_below="@id/yardimciIcon"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="5dp"
-                                android:fontFamily="sans-serif-condensed"
+                                android:fontFamily="@font/kalam_bold"
                                 android:text="Aşure"
                                 android:textAlignment="center"
                                 android:textSize="12sp" />
@@ -707,7 +708,7 @@
                                 android:layout_marginBottom="5dp"
                                 android:background="#32D532"
 
-                                android:fontFamily="sans-serif-condensed"
+                                android:fontFamily="@font/source_sans_pro_bold_italic"
                                 android:text="136"
                                 android:textAlignment="center" />
 
@@ -739,7 +740,7 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:background="#A5A3A5"
-                            android:fontFamily="sans-serif-condensed"
+                            android:fontFamily="@font/source_sans_pro_bold_italic"
                             android:gravity="center"
                             android:text="Ekler"
                             android:textAlignment="center"

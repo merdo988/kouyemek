@@ -64,7 +64,7 @@ public class CafesActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
-                Toast.makeText(getApplicationContext(), "Some error occurred!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "İnternet Bağlantınızı Kontrol Ediniz!!", Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
         });

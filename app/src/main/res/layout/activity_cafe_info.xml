@@ -18,7 +18,7 @@
             android:layout_height="wrap_content">
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/circleImage"
+                android:id="@+id/circleImageInfoScreen"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginTop="10dp"
@@ -38,11 +38,12 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true">
                 <TextView
+                    android:id="@+id/textViewCafeName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:fontFamily="@font/quikhand"
                     android:gravity="center"
-                    android:padding="4dp"
                     android:text="Ada Cafe"
                     android:textSize="25sp" />
             </RelativeLayout>
@@ -67,6 +68,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/kare1"
+                        android:fontFamily="@font/source_sans_pro_bold_italic"
                         android:layout_centerInParent="true"
                         android:gravity="center"
                         android:text="Ara" />
@@ -87,6 +89,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/kare2"
+                        android:fontFamily="@font/source_sans_pro_bold_italic"
                         android:layout_centerInParent="true"
                         android:gravity="center"
                         android:text="Web" />
@@ -107,6 +110,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/kare3"
+                        android:fontFamily="@font/source_sans_pro_bold_italic"
                         android:layout_centerInParent="true"
                         android:gravity="center"
                         android:text="Adres" />
@@ -118,10 +122,11 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="15dp">
+        android:padding="10dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_black_italic"
             android:text="Mekan Hakkında"/>
     </RelativeLayout>
     <RelativeLayout
@@ -142,6 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:fontFamily="@font/source_sans_pro_semi_bold"
             android:gravity="center"
             android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."/>
 
@@ -159,63 +165,48 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="15dp">
+        android:padding="10dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_black_italic"
             android:text="Mekan Görselleri"/>
     </RelativeLayout>
 
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp">
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="300dp"
             android:orientation="horizontal">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp">
-                <ListView
-                    android:id="@+id/galeri_menu_list_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </RelativeLayout>
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/alaca_corba_128x128">
+
+            </ImageView>
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/alaca_corba_128x128">
+            </ImageView>
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/alaca_corba_128x128">
+            </ImageView>
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/alaca_corba_128x128">
+            </ImageView>
+
         </LinearLayout>
-</RelativeLayout>
-<HorizontalScrollView
-    android:layout_width="wrap_content"
-    android:layout_height="300dp">
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:orientation="horizontal">
-<ImageView
-    android:layout_width="300dp"
-    android:layout_height="300dp"
-    android:layout_margin="10dp"
-    android:src="@drawable/alaca_corba_128x128">
-
-</ImageView>
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_margin="10dp"
-            android:src="@drawable/alaca_corba_128x128">
-        </ImageView>
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_margin="10dp"
-            android:src="@drawable/alaca_corba_128x128">
-        </ImageView>
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_margin="10dp"
-            android:src="@drawable/alaca_corba_128x128">
-
-        </ImageView>
-
-    </LinearLayout>
-</HorizontalScrollView>
+    </HorizontalScrollView>
 </LinearLayout>
 </ScrollView>
