@@ -33,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_toLeftOf="@+id/product_image"
-                    android:fontFamily="sans-serif-condensed"
+                    android:fontFamily="@font/kalam_regular"
                     android:gravity="center"
                     android:text="Tavuk Döner"
                     android:textSize="20sp"></TextView>
@@ -44,9 +44,10 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/product_header"
                     android:layout_toLeftOf="@+id/product_image"
+                    android:fontFamily="@font/neucha_regular"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:text="180 gr. tavuk döner. Salata, sos, mayonez, turşu ile"></TextView>
+                    android:text="180 gr. tavuk döner. Salata, sos, mayonez, turşu ile"/>
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
@@ -63,6 +64,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
+                        android:fontFamily="@font/source_sans_pro_bold_italic"
                         android:text="17,00 TL"
                         android:textColor="@color/white"></TextView>
                 </RelativeLayout>

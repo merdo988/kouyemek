@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setCustomView(R.layout.toolbar);
+
         cafeInfoClick = (TextView) findViewById(R.id.cafeClickInfo);
         cafeInfoClick.setVisibility(View.GONE);
 

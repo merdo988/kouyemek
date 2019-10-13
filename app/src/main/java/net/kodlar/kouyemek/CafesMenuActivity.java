@@ -77,6 +77,8 @@ public class CafesMenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     Intent intent = new Intent(getApplicationContext(), CafeInfoActivity.class);
+                    intent.putExtra("cafeName", getIntent().getStringExtra("cafeName"));
+                    intent.putExtra("cafeLogo", getIntent().getStringExtra("cafeLogo"));
                     startActivity(intent);
                 }catch (Exception e){
                     System.out.println("Hata Oldu "+e);

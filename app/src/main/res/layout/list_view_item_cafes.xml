@@ -23,7 +23,7 @@
                     android:text="Mahur Cafe"
                     android:layout_centerInParent="true"
                     android:textSize="20sp"
-                    android:fontFamily="sans-serif-condensed">
+                    android:fontFamily="@font/nanum_myeongjo">
                 </TextView>
 
                 <ImageView

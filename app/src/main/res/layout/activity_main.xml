@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
 
@@ -28,7 +30,7 @@
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_centerInParent="true"
-                app:srcCompat="@mipmap/ic_launcher_rounded" />
+                app:srcCompat="@drawable/test2" />
 
             <View
                 android:layout_width="match_parent"
@@ -48,179 +50,184 @@
 
 
             </RelativeLayout>
-
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/cardYemekhane"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:onClick="yemekhaneyeGit"
-            card_view:cardCornerRadius="15dp"
-            card_view:cardElevation="3dp">
-
-            <RelativeLayout
-
-                android:id="@+id/card_view_outerrrr"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp">
-
-                <ImageView
-                    android:id="@+id/sc1yemekhaneicon"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:src="@drawable/sc1yemekhane" />
-
-                <ImageView
-                    android:id="@+id/sc1SagOk"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/chevron_icon" />
-
-                <TextView
-                    android:id="@+id/sc1Text"
-                    android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardYemekhane"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="Yemekhane"
-                    android:textSize="16sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:onClick="yemekhaneyeGit"
+                    card_view:cardCornerRadius="15dp"
+                    card_view:cardElevation="3dp">
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/cardCafeler"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:onClick="cafelereGit"
-            card_view:cardCornerRadius="15dp"
-            card_view:cardElevation="3dp">
+                    <RelativeLayout
 
-            <RelativeLayout
+                        android:id="@+id/card_view_outerrrr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp">
 
-                android:id="@+id/cardCafelerIc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp">
+                        <ImageView
+                            android:id="@+id/sc1yemekhaneicon"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@drawable/sc1yemekhane" />
 
-                <ImageView
-                    android:id="@+id/sc1cardcafelericon"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:src="@drawable/coffeecup_icon" />
+                        <ImageView
+                            android:id="@+id/sc1SagOk"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/chevron_icon" />
 
-                <ImageView
-                    android:id="@+id/sc1CafelerSagOk"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/chevron_icon" />
+                        <TextView
+                            android:id="@+id/sc1Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/indie_flower"
+                            android:text="Yemekhane"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
 
-                <TextView
-                    android:id="@+id/sc1CardCafelerText"
-                    android:layout_width="wrap_content"
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardCafeler"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:onClick="cafelereGit"
+                    card_view:cardCornerRadius="15dp"
+                    card_view:cardElevation="3dp">
 
-                    android:layout_centerInParent="true"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="Kafeler"
-                    android:textSize="16sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
+                    <RelativeLayout
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardFirsatlar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            app:cardCornerRadius="15dp"
-            android:onClick="sponsorlaraGit"
-            app:cardElevation="3dp">
+                        android:id="@+id/cardCafelerIc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp">
 
-            <RelativeLayout
+                        <ImageView
+                            android:id="@+id/sc1cardcafelericon"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@drawable/coffeecup_icon" />
 
-                android:id="@+id/cardFirsatlarIc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp">
+                        <ImageView
+                            android:id="@+id/sc1CafelerSagOk"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/chevron_icon" />
 
-                <ImageView
-                    android:id="@+id/sc1cardFirsatlarIcIcon"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:src="@drawable/firsat_icon" />
+                        <TextView
+                            android:id="@+id/sc1CardCafelerText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/indie_flower"
+                            android:text="Kafeler"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
 
-                <ImageView
-                    android:id="@+id/sc1FirsalarSagOk"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/chevron_icon" />
-
-                <TextView
-                    android:id="@+id/sc1FirsatlarText"
-                    android:layout_width="wrap_content"
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardFirsatlar"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="Sponsorlar"
-                    android:textSize="16sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    app:cardCornerRadius="15dp"
+                    android:onClick="sponsorlaraGit"
+                    app:cardElevation="3dp">
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/cardInfo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="10dp"
-            card_view:cardCornerRadius="15dp"
-            card_view:cardElevation="3dp"
-            android:onClick="hakkindayaGit">
+                    <RelativeLayout
 
-            <RelativeLayout
-                android:id="@+id/cardInfoIc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp">
+                        android:id="@+id/cardFirsatlarIc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp">
 
-                <ImageView
-                    android:id="@+id/sc1cardInfoIcIcon"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:src="@drawable/info_icon" />
+                        <ImageView
+                            android:id="@+id/sc1cardFirsatlarIcIcon"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@drawable/firsat_icon" />
 
-                <ImageView
-                    android:id="@+id/sc1InfoSagOk"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/chevron_icon" />
+                        <ImageView
+                            android:id="@+id/sc1FirsalarSagOk"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/chevron_icon" />
 
-                <TextView
-                    android:id="@+id/sc1InfoText"
-                    android:layout_width="wrap_content"
+                        <TextView
+                            android:id="@+id/sc1FirsatlarText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/indie_flower"
+                            android:text="Sponsorlar"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardInfo"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="Uygulama Hakkında"
-                    android:textSize="16sp" />
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    card_view:cardCornerRadius="15dp"
+                    card_view:cardElevation="3dp"
+                    android:onClick="hakkindayaGit">
+
+                    <RelativeLayout
+                        android:id="@+id/cardInfoIc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:id="@+id/sc1cardInfoIcIcon"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@drawable/info_icon" />
+
+                        <ImageView
+                            android:id="@+id/sc1InfoSagOk"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/chevron_icon" />
+
+                        <TextView
+                            android:id="@+id/sc1InfoText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/indie_flower"
+                            android:text="Uygulama Hakkında"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
