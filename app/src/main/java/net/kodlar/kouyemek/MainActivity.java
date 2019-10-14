@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     CardView cardViewCafeler;
@@ -43,42 +44,53 @@ public class MainActivity extends AppCompatActivity {
 
         cardViewCafeler=(CardView)findViewById(R.id.cardCafeler);
         cardViewYemekhane=(CardView)findViewById(R.id.cardYemekhane);
-
-
     }
-
     public void cafelereGit(View view){
-        try {
-            Intent intent = new Intent(getApplicationContext(), CafesActivity.class);
-            startActivity(intent);
-        }catch (Exception e){
-            System.out.println("Hata Oldu "+e);
+        if (InternetConnection.checkConnection(getApplicationContext())) {
+            try {
+                Intent intent = new Intent(getApplicationContext(), CafesActivity.class);
+                startActivity(intent);
+            }catch (Exception e){
+                System.out.println("Hata Oldu "+e);
+            }
+        }else{
+            Toast.makeText(getApplicationContext(), "İnternet Bağlantınız Yok !", Toast.LENGTH_SHORT).show();
         }
     }
     public void yemekhaneyeGit(View view){
-        try {
-            Intent intent = new Intent(getApplicationContext(), YemekhaneActivity.class);
-            startActivity(intent);
-        }catch (Exception e){
-            System.out.println("Hata Oldu "+e);
+        if (InternetConnection.checkConnection(getApplicationContext())) {
+            try {
+                Intent intent = new Intent(getApplicationContext(), YemekhaneActivity.class);
+                startActivity(intent);
+            }catch (Exception e){
+                System.out.println("Hata Oldu "+e);
+            }
+        }else{
+            Toast.makeText(getApplicationContext(), "İnternet Bağlantınız Yok !", Toast.LENGTH_SHORT).show();
         }
-
     }
     public void hakkindayaGit(View view){
-        try {
-            Intent intent = new Intent(getApplicationContext(), AboutUsActivity.class);
-            startActivity(intent);
-        }catch (Exception e){
-            System.out.println("Hata Oldu "+e);
-        }
+
+            try {
+                Intent intent = new Intent(getApplicationContext(), AboutUsActivity.class);
+                startActivity(intent);
+            }catch (Exception e){
+                System.out.println("Hata Oldu "+e);
+            }
 
     }
     public void sponsorlaraGit(View view){
-        try {
-            Intent intent = new Intent(getApplicationContext(), SponsorlarActivity.class);
-            startActivity(intent);
-        }catch (Exception e){
-            System.out.println("Hata Oldu "+e);
+        if (InternetConnection.checkConnection(getApplicationContext())) {
+            try {
+                Intent intent = new Intent(getApplicationContext(), SponsorlarActivity.class);
+                startActivity(intent);
+            }catch (Exception e){
+                System.out.println("Hata Oldu "+e);
+            }
         }
+        else{
+            Toast.makeText(getApplicationContext(), "İnternet Bağlantınız Yok !", Toast.LENGTH_SHORT).show();
+        }
+
     }
 }

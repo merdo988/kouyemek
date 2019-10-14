@@ -26,7 +26,7 @@
                 android:layout_marginRight="25dp"
                 android:layout_toLeftOf="@id/tarihbilgisi"
                 android:onClick="evvelsiGun"
-                android:src="@drawable/left_arrow" />
+                android:src="@drawable/yemekhane_activity_left_arrow_icon" />
 
             <RelativeLayout
                 android:id="@+id/tarihbilgisi"
@@ -63,7 +63,7 @@
                 android:layout_marginLeft="25dp"
                 android:layout_toRightOf="@id/tarihbilgisi"
                 android:onClick="ertesiGun"
-                android:src="@drawable/right_arrow" />
+                android:src="@drawable/yemekhane_activity_right_arrow_icon" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -78,7 +78,7 @@
                 android:layout_width="250dp"
                 android:layout_height="250dp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/closed" />
+                android:src="@drawable/yemekhane_activity_closed_icon" />
 
         </RelativeLayout>
 
@@ -138,7 +138,6 @@
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="10dp"
                                 android:padding="4dp"
-                                android:src="@drawable/ayran_128x128"
                                 app:civ_border_color="#8288D3"
                                 app:civ_border_width="2dp" />
 
@@ -199,7 +198,6 @@
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="10dp"
                                 android:padding="4dp"
-                                android:src="@drawable/ayran_128x128"
                                 app:civ_border_color="#8288D3"
                                 app:civ_border_width="2dp" />
 
@@ -351,7 +349,6 @@
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="10dp"
                                 android:padding="4dp"
-                                android:src="@drawable/ayran_128x128"
                                 app:civ_border_color="#59B057"
                                 app:civ_border_width="2dp" />
 
@@ -417,7 +414,6 @@
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="10dp"
                                 android:padding="4dp"
-                                android:src="@drawable/ayran_128x128"
                                 app:civ_border_color="#59B057"
                                 app:civ_border_width="2dp" />
 
@@ -561,7 +557,6 @@
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="10dp"
                                 android:padding="4dp"
-                                android:src="@drawable/ayran_128x128"
                                 app:civ_border_color="#57B0AF"
                                 app:civ_border_width="2dp" />
 
@@ -682,7 +677,6 @@
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="10dp"
                                 android:padding="4dp"
-                                android:src="@drawable/ayran_128x128"
                                 app:civ_border_color="#FED5B5"
                                 app:civ_border_width="2dp" />
 

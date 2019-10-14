@@ -11,10 +11,12 @@
 
     <ImageView
         android:id="@+id/closeBanner"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
         android:layout_alignTop="@id/bannerAfis"
         android:layout_alignRight="@id/bannerAfis"
 
-        android:src="@drawable/closebanner" />
+        android:src="@drawable/yemekhane_activity_close_banner_icon" />
 </RelativeLayout>

@@ -49,47 +49,53 @@ public class CafesMenuActivity extends AppCompatActivity {
         cafeID = Integer.parseInt(getIntent().getStringExtra("cafeID"));
         Picasso.with(getApplicationContext()).load(getIntent().getStringExtra("cafeLogo")).into(cafeLogo);
 
-        CafesMenu = new ArrayList<CafesMenu>();
 
-        dialog = new ProgressDialog(this);
-        dialog.setMessage("Loading....");
-        dialog.show();
-        url = "http://kodlar.net/kouyemek/products.php?product_cafe_id="+cafeID;
-        StringRequest request = new StringRequest(url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String string) {
-                parseJsonData(string);
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError volleyError) {
-                Toast.makeText(getApplicationContext(), "İnternet Bağlantınızı Kontrol Edin!!", Toast.LENGTH_SHORT).show();
-                dialog.dismiss();
-            }
-        });
+            CafesMenu = new ArrayList<CafesMenu>();
 
-        RequestQueue rQueue = Volley.newRequestQueue(CafesMenuActivity.this);
-        rQueue.add(request);
-
-        layoutInfo = (RelativeLayout) findViewById(R.id.cafeInfoLayoutClick);
-        layoutInfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    Intent intent = new Intent(getApplicationContext(), CafeInfoActivity.class);
-                    intent.putExtra("cafeName", getIntent().getStringExtra("cafeName"));
-                    intent.putExtra("cafeLogo", getIntent().getStringExtra("cafeLogo"));
-                    startActivity(intent);
-                }catch (Exception e){
-                    System.out.println("Hata Oldu "+e);
+            dialog = new ProgressDialog(this);
+            dialog.setMessage("Loading....");
+            dialog.show();
+            url = "http://kodlar.net/kouyemek/products.php?product_cafe_id="+cafeID;
+            StringRequest request = new StringRequest(url, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String string) {
+                    parseJsonData(string);
                 }
-            }
-        });
-        customListViewAdapterCafesMenu = new CustomListViewAdapterCafesMenu(this,R.layout.list_view_item_cafes_menu,CafesMenu);
-        listviewCafesMenu = (ListView)findViewById(R.id.galeri_menu_list_view);
-        listviewCafesMenu.setAdapter(customListViewAdapterCafesMenu);
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError volleyError) {
+                    Toast.makeText(getApplicationContext(), "İnternet Bağlantınızı Kontrol Edin!!", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }
+            });
 
-    }
+            RequestQueue rQueue = Volley.newRequestQueue(CafesMenuActivity.this);
+            rQueue.add(request);
+
+            layoutInfo = (RelativeLayout) findViewById(R.id.cafeInfoLayoutClick);
+            layoutInfo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (InternetConnection.checkConnection(getApplicationContext())) {
+                        try {
+                            Intent intent = new Intent(getApplicationContext(), CafeInfoActivity.class);
+                            intent.putExtra("cafeName", getIntent().getStringExtra("cafeName"));
+                            intent.putExtra("cafeLogo", getIntent().getStringExtra("cafeLogo"));
+                            intent.putExtra("cafeId",cafeID);
+                            startActivity(intent);
+                        }catch (Exception e){
+                            System.out.println("Hata Oldu "+e);
+                        }
+                    }else{
+                        Toast.makeText(getApplicationContext(), "İnternet Bağlantınızı Kontrol Edin!!", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+            });
+            customListViewAdapterCafesMenu = new CustomListViewAdapterCafesMenu(this,R.layout.list_view_item_cafes_menu,CafesMenu);
+            listviewCafesMenu = (ListView)findViewById(R.id.galeri_menu_list_view);
+            listviewCafesMenu.setAdapter(customListViewAdapterCafesMenu);
+        }
 
     void parseJsonData(String jsonString) {
         try {

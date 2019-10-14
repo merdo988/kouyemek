@@ -35,16 +35,16 @@ public class CafesActivity extends AppCompatActivity {
     ImageView img;
     TextView cafeInfoClick;
     CustomListViewAdapterCafes customListViewAdapterCafes;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_cafes);
         this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setCustomView(R.layout.toolbar);
-
         cafeInfoClick = (TextView) findViewById(R.id.cafeClickInfo);
         cafeInfoClick.setVisibility(View.GONE);
-
         img = (ImageView) findViewById(R.id.logo);
         img.setVisibility(View.GONE);
         menuName = (TextView) findViewById(R.id.menuName);
@@ -57,22 +57,20 @@ public class CafesActivity extends AppCompatActivity {
         dialog.show();
 
         StringRequest request = new StringRequest(url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String string) {
-                parseJsonData(string);
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError volleyError) {
-                Toast.makeText(getApplicationContext(), "İnternet Bağlantınızı Kontrol Ediniz!!", Toast.LENGTH_SHORT).show();
-                dialog.dismiss();
-            }
-        });
-        RequestQueue rQueue = Volley.newRequestQueue(CafesActivity.this);
-        rQueue.add(request);
-        setContentView(R.layout.activity_cafes);
-
-    }
+                @Override
+                public void onResponse(String string) {
+                    parseJsonData(string);
+                }
+                }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError volleyError) {
+                    Toast.makeText(getApplicationContext(), "İnternet Bağlantınızı Kontrol Ediniz!!", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }
+            });
+            RequestQueue rQueue = Volley.newRequestQueue(CafesActivity.this);
+            rQueue.add(request);
+        }
 
     void parseJsonData(String jsonString) {
         try {
@@ -84,7 +82,6 @@ public class CafesActivity extends AppCompatActivity {
             for(int i = 0; i < cafelerArray.length(); ++i) {
                 cafes.add(new Cafes(cafelerIDArray.getString(i),cafelerArray.getString(i),cafelerLogoArray.getString(i)));
             }
-
             customListViewAdapterCafes = new CustomListViewAdapterCafes(this,R.layout.list_view_item_cafes,cafes);
             listviewCafes = (ListView)findViewById(R.id.cafes_list_view);
 
@@ -94,7 +91,6 @@ public class CafesActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
         dialog.dismiss();
     }
     public void turnBack(View view){

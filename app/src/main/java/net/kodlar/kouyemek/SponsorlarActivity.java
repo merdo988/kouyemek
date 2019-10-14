@@ -2,6 +2,7 @@ package net.kodlar.kouyemek;
 
 import android.app.ActionBar;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,39 +36,40 @@ public class SponsorlarActivity extends AppCompatActivity {
         String url = "http://kodlar.net/kouyemek/sponsor.php";
         super.onCreate(savedInstanceState);
 
-        this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setDisplayShowCustomEnabled(true);
-        getSupportActionBar().setCustomView(R.layout.toolbar);
 
-        cafeInfoClick = (TextView) findViewById(R.id.cafeClickInfo);
-        cafeInfoClick.setVisibility(View.GONE);
-        img = (ImageView) findViewById(R.id.logo);
-        img.setVisibility(View.GONE);
-        menuName = (TextView) findViewById(R.id.menuName);
-        menuName.setText("Sponsorlar");
-        menuName.setGravity(RelativeLayout.CENTER_IN_PARENT);
+            this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+            getSupportActionBar().setDisplayShowCustomEnabled(true);
+            getSupportActionBar().setCustomView(R.layout.toolbar);
 
-        sponsorlarListView = new ArrayList<Sponsorlar>();
+            cafeInfoClick = (TextView) findViewById(R.id.cafeClickInfo);
+            cafeInfoClick.setVisibility(View.GONE);
+            img = (ImageView) findViewById(R.id.logo);
+            img.setVisibility(View.GONE);
+            menuName = (TextView) findViewById(R.id.menuName);
+            menuName.setText("Sponsorlar");
+            menuName.setGravity(RelativeLayout.CENTER_IN_PARENT);
+            sponsorlarListView = new ArrayList<Sponsorlar>();
 
-        dialog = new ProgressDialog(this);
-        dialog.setMessage("Loading....");
-        dialog.show();
+            dialog = new ProgressDialog(this);
+            dialog.setMessage("Loading....");
+            dialog.show();
 
-        StringRequest request = new StringRequest(url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String string) {
-                parseJsonData(string);
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError volleyError) {
-                Toast.makeText(getApplicationContext(), "Some error occurred!!", Toast.LENGTH_SHORT).show();
-                dialog.dismiss();
-            }
-        });
-        RequestQueue rQueue = Volley.newRequestQueue(SponsorlarActivity.this);
-        rQueue.add(request);
-        setContentView(R.layout.activity_sponsorlar);
+            StringRequest request = new StringRequest(url, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String string) {
+                    parseJsonData(string);
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError volleyError) {
+                    Toast.makeText(getApplicationContext(), "Some error occurred!!", Toast.LENGTH_SHORT).show();
+                    dialog.dismiss();
+                }
+            });
+            RequestQueue rQueue = Volley.newRequestQueue(SponsorlarActivity.this);
+            rQueue.add(request);
+            setContentView(R.layout.activity_sponsorlar);
+
 
     }
         void parseJsonData(String jsonString) {

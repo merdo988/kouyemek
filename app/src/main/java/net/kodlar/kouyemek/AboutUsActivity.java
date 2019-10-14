@@ -4,13 +4,8 @@ package net.kodlar.kouyemek;
 import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListAdapter;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -47,23 +42,20 @@ public class AboutUsActivity extends AppCompatActivity {
 
         socialListView = new ArrayList<AboutUs>();
 
-
-
-        socialListView.add(new AboutUs(R.drawable.contact_icon , getString(R.string.about_contact_us)));
-        socialListView.add(new AboutUs(R.drawable.website_icon , getString(R.string.about_website)));
-        socialListView.add(new AboutUs(R.drawable.instagram_icon , getString(R.string.about_instagram)));
-        socialListView.add(new AboutUs(R.drawable.playstore_icon , getString(R.string.about_play_store)));
-        socialListView.add(new AboutUs(R.drawable.facebook_icon , getString(R.string.about_facebook)));
-        socialListView.add(new AboutUs(R.drawable.github_icon , getString(R.string.about_github)));
-        socialListView.add(new AboutUs(R.drawable.twitter_icon , getString(R.string.about_twitter)));
-        socialListView.add(new AboutUs(R.drawable.youtube_icon , getString(R.string.about_youtube)));
+        socialListView.add(new AboutUs(R.drawable.about_us_activity_contact_icon, getString(R.string.about_contact_us)));
+        socialListView.add(new AboutUs(R.drawable.about_us_activity_website_icon, getString(R.string.about_website)));
+        socialListView.add(new AboutUs(R.drawable.about_us_activity_instagram_icon, getString(R.string.about_instagram)));
+        socialListView.add(new AboutUs(R.drawable.about_us_activity_playstore_icon, getString(R.string.about_play_store)));
+        socialListView.add(new AboutUs(R.drawable.about_us_activity_twitter_icon, getString(R.string.about_twitter)));
 
 
         customListViewAdapterAboutUs = new CustomListViewAdapterAboutUs(this,R.layout.list_view_item_about_us,socialListView);
         listviewSocial = (ExpandableHeightListView)findViewById(R.id.expandable_listview);
         listviewSocial.setAdapter(customListViewAdapterAboutUs);
         listviewSocial.setExpanded(true);
+
     }
+
     public void turnBack(View view){
         finish();
     }

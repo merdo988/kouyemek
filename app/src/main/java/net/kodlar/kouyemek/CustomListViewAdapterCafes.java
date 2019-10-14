@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.squareup.picasso.Picasso;
 
 
@@ -48,15 +50,20 @@ public class CustomListViewAdapterCafes extends ArrayAdapter<Cafes> {
             @Override
             public void onClick(View v) {
                 c = getItem(position);
-                try {
-                    Intent intent = new Intent(getContext(), CafesMenuActivity.class);
-                    intent.putExtra("cafeName", c.getCafeName());
-                    intent.putExtra("cafeLogo", c.getLogoResourceUrl());
-                    intent.putExtra("cafeID", c.getCafeID());
-                    context.startActivity(intent);
-                }catch (Exception e){
-                    System.out.println("Hata Oldu "+e);
+                if (InternetConnection.checkConnection(context)){
+                    try {
+                        Intent intent = new Intent(getContext(), CafesMenuActivity.class);
+                        intent.putExtra("cafeName", c.getCafeName());
+                        intent.putExtra("cafeLogo", c.getLogoResourceUrl());
+                        intent.putExtra("cafeID", c.getCafeID());
+                        context.startActivity(intent);
+                    }catch (Exception e){
+                        System.out.println("Hata Oldu "+e);
+                    }
+                }else{
+                    Toast.makeText(context, "İnternet Bağlantısı Yok !!", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
         return v;

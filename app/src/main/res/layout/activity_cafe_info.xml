@@ -8,35 +8,43 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:padding="10dp">
+
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:id="@+id/rel1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true">
+
             <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/circleImageInfoScreen"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:padding="4dp"
-                android:src="@drawable/ayran_128x128"
                 app:civ_border_color="#59B057"
                 app:civ_border_width="2dp" />
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:id="@+id/rel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/rel1">
 
             <RelativeLayout
                 android:id="@+id/cafeName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true">
+
                 <TextView
                     android:id="@+id/textViewCafeName"
                     android:layout_width="wrap_content"
@@ -47,77 +55,90 @@
                     android:text="Ada Cafe"
                     android:textSize="25sp" />
             </RelativeLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_below="@id/cafeName"
                 android:layout_centerInParent="true"
                 android:onClick="Ara"
                 android:padding="10dp">
+
                 <RelativeLayout
                     android:id="@+id/callIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="15dp">
+                    android:layout_gravity="center_vertical"
+                    android:padding="10dp">
+
                     <ImageView
                         android:id="@+id/kare1"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/phone" />
+                        android:src="@drawable/cafe_info_activity_phone_icon" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/kare1"
-                        android:fontFamily="@font/source_sans_pro_bold_italic"
                         android:layout_centerInParent="true"
+                        android:fontFamily="@font/source_sans_pro_bold_italic"
                         android:gravity="center"
                         android:text="Ara" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:id="@+id/webIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_toRightOf="@id/callIcon"
-                    android:padding="15dp"
-                    android:onClick="Web">
+                    android:onClick="Web"
+                    android:padding="10dp">
+
                     <ImageView
                         android:id="@+id/kare2"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/tap" />
+                        android:src="@drawable/cafe_info_activity_web_icon" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/kare2"
-                        android:fontFamily="@font/source_sans_pro_bold_italic"
                         android:layout_centerInParent="true"
+                        android:fontFamily="@font/source_sans_pro_bold_italic"
                         android:gravity="center"
                         android:text="Web" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:id="@+id/mapIcon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@id/webIcon"
                     android:onClick="Adres"
-                    android:padding="15dp"
-                    android:layout_toRightOf="@id/webIcon">
+                    android:padding="10dp">
+
                     <ImageView
                         android:id="@+id/kare3"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/placeholder" />
+                        android:src="@drawable/cafe_info_activity_map_icon" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/kare3"
-                        android:fontFamily="@font/source_sans_pro_bold_italic"
                         android:layout_centerInParent="true"
+                        android:fontFamily="@font/source_sans_pro_bold_italic"
                         android:gravity="center"
                         android:text="Adres" />
                 </RelativeLayout>
             </LinearLayout>
         </RelativeLayout>
-    </LinearLayout>
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -143,13 +164,15 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         >
+
         <TextView
+            android:id="@+id/cafe_hakkinda"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="@font/source_sans_pro_semi_bold"
             android:gravity="center"
-            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."/>
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." />
 
     </RelativeLayout>
     <RelativeLayout
@@ -181,30 +204,44 @@
             android:layout_height="300dp"
             android:orientation="horizontal">
             <ImageView
+                android:id="@+id/resim1"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/alaca_corba_128x128">
+                android:layout_margin="10dp">
 
             </ImageView>
             <ImageView
+                android:id="@+id/resim2"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/alaca_corba_128x128">
+                android:layout_margin="10dp">
             </ImageView>
             <ImageView
+                android:id="@+id/resim3"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/alaca_corba_128x128">
+                android:layout_margin="10dp">
             </ImageView>
             <ImageView
+                android:id="@+id/resim4"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/alaca_corba_128x128">
+                android:layout_margin="10dp">
             </ImageView>
+            <ImageView
+                android:id="@+id/resim5"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_margin="10dp">
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/resim6"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_margin="10dp">
+            </ImageView>
+
 
         </LinearLayout>
     </HorizontalScrollView>

@@ -89,89 +89,99 @@ public class YemekhaneActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yemekhane);
+            this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+            getSupportActionBar().setDisplayShowCustomEnabled(true);
+            getSupportActionBar().setCustomView(R.layout.toolbar);
+            cafeInfoClick = (TextView) findViewById(R.id.cafeClickInfo);
+            cafeInfoClick.setVisibility(View.GONE);
+            img = (ImageView) findViewById(R.id.logo);
+            img.setVisibility(View.GONE);
+            menuName = (TextView) findViewById(R.id.menuName);
+            menuName.setText("Yemek Listesi");
+            menuName.setGravity(RelativeLayout.CENTER_IN_PARENT);
 
-        showBannerDialog();
-        this.getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setDisplayShowCustomEnabled(true);
-        getSupportActionBar().setCustomView(R.layout.toolbar);
+            showBannerDialog();
 
-        cafeInfoClick = (TextView) findViewById(R.id.cafeClickInfo);
-        cafeInfoClick.setVisibility(View.GONE);
-        img = (ImageView) findViewById(R.id.logo);
-        img.setVisibility(View.GONE);
-        menuName = (TextView) findViewById(R.id.menuName);
-        menuName.setText("Yemek Listesi");
-        menuName.setGravity(RelativeLayout.CENTER_IN_PARENT);
+            anayemek2Text = (TextView) findViewById(R.id.anayemek2Text);
+            anayemek1Text = (TextView) findViewById(R.id.anayemek1Text);
+            anayemek2 = (CircleImageView) findViewById(R.id.anayemek2);
+            anayemek1 = (CircleImageView) findViewById(R.id.anayemek1);
+            corba2Text = (TextView) findViewById(R.id.corba2Text);
+            corba1Text = (TextView) findViewById(R.id.corba1Text);
+            corba2 = (CircleImageView) findViewById(R.id.corba2);
+            corba1 = (CircleImageView) findViewById(R.id.corba1);
+            yardimciYemekText = (TextView) findViewById(R.id.yardimciText);
+            yardimciYemek = (CircleImageView) findViewById(R.id.yardimciIcon);
+            tatliText = (TextView) findViewById(R.id.icecekText);
+            tatli = (CircleImageView) findViewById(R.id.icecekIcon);
+            tarih = (TextView) findViewById(R.id.tarih);
+            anaRelat = (RelativeLayout) findViewById(R.id.anaRelat);
+            corbaRelat = (RelativeLayout) findViewById(R.id.corbaRelat);
+            eklerRelat = (RelativeLayout) findViewById(R.id.eklerRelat);
+            noInternet = (RelativeLayout) findViewById(R.id.noInternet);
+            tarihler = (RelativeLayout) findViewById(R.id.tarihler);
+            scroll = (ScrollView) findViewById(R.id.scroll);
+            anayemek1kalori = (TextView) findViewById(R.id.anayemek1kalori);
+            anayemek2kalori = (TextView) findViewById(R.id.anayemek2kalori);
+            corba1kalori = (TextView) findViewById(R.id.corba1kalori);
+            corba2kalori = (TextView) findViewById(R.id.corba2kalori);
+            yardimcikalori = (TextView) findViewById(R.id.yardimcikalori);
+            icecekkalori = (TextView) findViewById(R.id.icecekkalori);
+            SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+            gunText = (TextView) findViewById(R.id.gunText);
+            Date d = new Date();
+            currentDayText = sdf.format(d);
+            scroll.setOnTouchListener(new OnSwipeTouchListener(YemekhaneActivity.this) {
 
+                /*
+                public void onSwipeTop() {
 
-        anayemek2Text = (TextView) findViewById(R.id.anayemek2Text);
-        anayemek1Text = (TextView) findViewById(R.id.anayemek1Text);
-        anayemek2 = (CircleImageView) findViewById(R.id.anayemek2);
-        anayemek1 = (CircleImageView) findViewById(R.id.anayemek1);
-        corba2Text = (TextView) findViewById(R.id.corba2Text);
-        corba1Text = (TextView) findViewById(R.id.corba1Text);
-        corba2 = (CircleImageView) findViewById(R.id.corba2);
-        corba1 = (CircleImageView) findViewById(R.id.corba1);
-        yardimciYemekText = (TextView) findViewById(R.id.yardimciText);
-        yardimciYemek = (CircleImageView) findViewById(R.id.yardimciIcon);
-        tatliText = (TextView) findViewById(R.id.icecekText);
-        tatli = (CircleImageView) findViewById(R.id.icecekIcon);
-        tarih = (TextView) findViewById(R.id.tarih);
-        anaRelat = (RelativeLayout) findViewById(R.id.anaRelat);
-        corbaRelat = (RelativeLayout) findViewById(R.id.corbaRelat);
-        eklerRelat = (RelativeLayout) findViewById(R.id.eklerRelat);
-        noInternet = (RelativeLayout) findViewById(R.id.noInternet);
-        tarihler = (RelativeLayout) findViewById(R.id.tarihler);
-        scroll = (ScrollView) findViewById(R.id.scroll);
-        anayemek1kalori = (TextView) findViewById(R.id.anayemek1kalori);
-        anayemek2kalori = (TextView) findViewById(R.id.anayemek2kalori);
-        corba1kalori = (TextView) findViewById(R.id.corba1kalori);
-        corba2kalori = (TextView) findViewById(R.id.corba2kalori);
-        yardimcikalori = (TextView) findViewById(R.id.yardimcikalori);
-        icecekkalori = (TextView) findViewById(R.id.icecekkalori);
-        SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
-        gunText = (TextView) findViewById(R.id.gunText);
-        Date d = new Date();
-        currentDayText = sdf.format(d);
-        scroll.setOnTouchListener(new OnSwipeTouchListener(YemekhaneActivity.this) {
+                    Toast.makeText(YemekhaneActivity.this, "top", Toast.LENGTH_SHORT).show();
+                }
+                public void onSwipeBottom() {
+                    Toast.makeText(YemekhaneActivity.this, "bottom", Toast.LENGTH_SHORT).show();
+                }
+                */
+                public void onSwipeRight() {
+                    if (InternetConnection.checkConnection(getApplicationContext())) {
+                        scroll.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade));
+                        evvelsiGun();
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(), "İnternet Bağlantınızı Kontrol Edin!!", Toast.LENGTH_SHORT).show();
+                    }
+                }
 
-            /*
-            public void onSwipeTop() {
+                public void onSwipeLeft() {
+                    if (InternetConnection.checkConnection(getApplicationContext())) {
+                        scroll.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade));
+                        ertesiGun();
+                    }else{
+                        Toast.makeText(getApplicationContext(), "İnternet Bağlantınızı Kontrol Edin!!", Toast.LENGTH_SHORT).show();
 
-                Toast.makeText(YemekhaneActivity.this, "top", Toast.LENGTH_SHORT).show();
-            }
-            public void onSwipeBottom() {
-                Toast.makeText(YemekhaneActivity.this, "bottom", Toast.LENGTH_SHORT).show();
-            }
-            */
-            public void onSwipeRight() {
-
-                scroll.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade));
-                evvelsiGun();
-            }
-
-            public void onSwipeLeft() {
-                scroll.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade));
-                ertesiGun();
-            }
+                    }
 
 
-        });
 
-        noInternet.setVisibility(View.GONE);
-        lineer = (LinearLayout) findViewById(R.id.lineer);
-        maxDay = Calendar.getInstance().getActualMaximum(Calendar.DAY_OF_MONTH);
-        c = Calendar.getInstance();
-        currentDayNumber = c.get(Calendar.DAY_OF_MONTH);
-        gun = c.get(Calendar.DAY_OF_MONTH);
-        ay = c.get(Calendar.MONTH) + 1;
-        yil = c.get(Calendar.YEAR);
-        String date = String.format("%02d", gun) + "." + String.format("%02d", ay) + "." + String.valueOf(yil);
-        tarih.setText(date);
-        yukle(date);
-        getTodayText(date);
+                }
 
-    }
+
+            });
+
+            noInternet.setVisibility(View.GONE);
+            lineer = (LinearLayout) findViewById(R.id.lineer);
+            maxDay = Calendar.getInstance().getActualMaximum(Calendar.DAY_OF_MONTH);
+            c = Calendar.getInstance();
+            currentDayNumber = c.get(Calendar.DAY_OF_MONTH);
+            gun = c.get(Calendar.DAY_OF_MONTH);
+            ay = c.get(Calendar.MONTH) + 1;
+            yil = c.get(Calendar.YEAR);
+            String date = String.format("%02d", gun) + "." + String.format("%02d", ay) + "." + String.valueOf(yil);
+            tarih.setText(date);
+            yukle(date);
+            getTodayText(date);
+        }
+
 
     void parseJsonData(String jsonString) {
 

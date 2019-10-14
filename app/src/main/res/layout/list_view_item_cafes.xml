@@ -12,8 +12,7 @@
                 <ImageView
                     android:id="@+id/sponsorLogo"
                     android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:src="@drawable/logo">
+                    android:layout_height="70dp">
                 </ImageView>
 
                 <TextView
@@ -31,7 +30,7 @@
                     android:layout_height="25dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/chevron_icon">
+                    android:src="@drawable/chevron_right__icon">
                 </ImageView>
             </RelativeLayout>
 
